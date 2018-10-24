@@ -1,27 +1,19 @@
-import pygrakn
+import pygrakn.pygrakn as grakn
+import requests
 from pprint import pprint
 
-'''
-directory of useful attributes of grakn objects
 
-    all:
-        id
-        type().label()
+with grakn.Graph(keyspace='cognitive_impairment') as graph:
+    # data = graph.execute('match $x; limit 10; get;')
+    # data = graph.execute('insert $x isa sentence has text \"hi there\";')
+    # graph.commit()
+    data = graph.execute('match $x isa sentence has text \"hi there\"; get;')
+    # data = graph.execute('match $x isa sentence has text \"hi there\"; delete $x;')
+    # graph.commit()
 
-    entity:
-        attributes
-        relationships
-        roles
-        type
-
-    attribute:
-        type().label()
-        value()
-
-    relationship:
-        role_players_map
-'''
-
-with pygrakn.Graph(keyspace='cognitive_impairment') as graph:
-    data = graph.execute('match $x isa relationship; limit 5; get;')
     pprint(data)
+
+
+# read in text data from file
+# sent to luscient api
+# put results in graph

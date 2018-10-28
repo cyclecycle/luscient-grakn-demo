@@ -17,6 +17,7 @@
           "text": "BFT",
           "valence": "UP"
         },
+        "level": "phrase",
         "subsequent": {
           "text": "cell lytic activity",
           "valence": "UP"
@@ -38,6 +39,7 @@
           "text": "BFT",
           "valence": "UP"
         },
+        "level": "phrase",
         "subsequent": {
           "text": "cell proliferation",
           "valence": "UP"
@@ -59,6 +61,7 @@
           "text": "BFT",
           "valence": "UP"
         },
+        "level": "phrase",
         "subsequent": {
           "text": "barrier permeability with active secretion of chloride ions",
           "valence": "UP"
@@ -80,6 +83,7 @@
           "text": "BFT",
           "valence": "UP"
         },
+        "level": "phrase",
         "subsequent": {
           "text": "the antiapoptotic protein cIAP2",
           "valence": "UP"
@@ -101,6 +105,7 @@
           "text": "BFT",
           "valence": "UP"
         },
+        "level": "phrase",
         "subsequent": {
           "text": "the polyamine catalyst spermine oxidase",
           "valence": "UP"
@@ -122,6 +127,7 @@
           "text": "the polyamine catalyst spermine oxidase which",
           "valence": "UP"
         },
+        "level": "phrase",
         "subsequent": {
           "text": "ROS production",
           "valence": "UP"
@@ -143,6 +149,7 @@
           "text": "the polyamine catalyst spermine oxidase which",
           "valence": "UP"
         },
+        "level": "phrase",
         "subsequent": {
           "text": "DNA damage",
           "valence": "UP"
@@ -164,6 +171,7 @@
           "text": "the polyamine catalyst spermine oxidase which",
           "valence": "UP"
         },
+        "level": "phrase",
         "subsequent": {
           "text": "cell proliferation",
           "valence": "UP"
@@ -185,6 +193,7 @@
           "text": "BFT",
           "valence": "UP"
         },
+        "level": "phrase",
         "subsequent": {
           "text": "rapid DNA damage in colon epithelial cells",
           "valence": "UP"
@@ -195,6 +204,7 @@
           "text": "BFT",
           "valence": "UP"
         },
+        "level": "phrase",
         "subsequent": {
           "text": "vivo",
           "valence": "UP"
@@ -209,6 +219,7 @@
               "text": "BFT",
               "valence": "UP"
             },
+            "level": "phrase",
             "subsequent": {
               "text": "cell lytic activity",
               "valence": "UP"
@@ -229,7 +240,7 @@
         "is_directional": true,
         "named_ents_both_sides": true,
         "obj": {
-          "ent_id": "n3",
+          "ent_id": "n5",
           "named_ents": [
             {
               "end": 25,
@@ -284,7 +295,7 @@
           "valence": "UP"
         },
         "subj": {
-          "ent_id": "n10",
+          "ent_id": "n9",
           "named_ents": [
             {
               "end": 3,
@@ -320,6 +331,7 @@
               "text": "BFT",
               "valence": "UP"
             },
+            "level": "phrase",
             "subsequent": {
               "text": "cell proliferation",
               "valence": "UP"
@@ -340,7 +352,7 @@
         "is_directional": true,
         "named_ents_both_sides": true,
         "obj": {
-          "ent_id": "n6",
+          "ent_id": "n4",
           "named_ents": [
             {
               "end": 80,
@@ -389,7 +401,7 @@
           "valence": "UP"
         },
         "subj": {
-          "ent_id": "n10",
+          "ent_id": "n9",
           "named_ents": [
             {
               "end": 3,
@@ -425,6 +437,7 @@
               "text": "BFT",
               "valence": "UP"
             },
+            "level": "phrase",
             "subsequent": {
               "text": "barrier permeability with active secretion of chloride ions",
               "valence": "UP"
@@ -445,7 +458,7 @@
         "is_directional": true,
         "named_ents_both_sides": true,
         "obj": {
-          "ent_id": "n5",
+          "ent_id": "n0",
           "named_ents": [
             {
               "end": 150,
@@ -550,7 +563,7 @@
           "valence": "UP"
         },
         "subj": {
-          "ent_id": "n10",
+          "ent_id": "n9",
           "named_ents": [
             {
               "end": 85,
@@ -586,6 +599,7 @@
               "text": "BFT",
               "valence": "UP"
             },
+            "level": "phrase",
             "subsequent": {
               "text": "the antiapoptotic protein cIAP2",
               "valence": "UP"
@@ -606,7 +620,7 @@
         "is_directional": true,
         "named_ents_both_sides": true,
         "obj": {
-          "ent_id": "n2",
+          "ent_id": "n6",
           "named_ents": [
             {
               "end": 284,
@@ -661,7 +675,7 @@
           "valence": "UP"
         },
         "subj": {
-          "ent_id": "n10",
+          "ent_id": "n9",
           "named_ents": [
             {
               "end": 244,
@@ -697,6 +711,7 @@
               "text": "BFT",
               "valence": "UP"
             },
+            "level": "phrase",
             "subsequent": {
               "text": "the polyamine catalyst spermine oxidase",
               "valence": "UP"
@@ -717,7 +732,7 @@
         "is_directional": true,
         "named_ents_both_sides": true,
         "obj": {
-          "ent_id": "n1",
+          "ent_id": "n10",
           "named_ents": [
             {
               "end": 328,
@@ -766,7 +781,7 @@
           "valence": "UP"
         },
         "subj": {
-          "ent_id": "n10",
+          "ent_id": "n9",
           "named_ents": [
             {
               "end": 244,
@@ -802,6 +817,7 @@
               "text": "the polyamine catalyst spermine oxidase which",
               "valence": "UP"
             },
+            "level": "phrase",
             "subsequent": {
               "text": "ROS production",
               "valence": "UP"
@@ -822,7 +838,7 @@
         "is_directional": true,
         "named_ents_both_sides": true,
         "obj": {
-          "ent_id": "n0",
+          "ent_id": "n2",
           "named_ents": [
             {
               "end": 348,
@@ -871,7 +887,7 @@
           "valence": "UP"
         },
         "subj": {
-          "ent_id": "n9",
+          "ent_id": "n1",
           "named_ents": [
             {
               "end": 328,
@@ -918,6 +934,7 @@
               "text": "the polyamine catalyst spermine oxidase which",
               "valence": "UP"
             },
+            "level": "phrase",
             "subsequent": {
               "text": "DNA damage",
               "valence": "UP"
@@ -987,7 +1004,7 @@
           "valence": "UP"
         },
         "subj": {
-          "ent_id": "n9",
+          "ent_id": "n1",
           "named_ents": [
             {
               "end": 328,
@@ -1034,6 +1051,7 @@
               "text": "the polyamine catalyst spermine oxidase which",
               "valence": "UP"
             },
+            "level": "phrase",
             "subsequent": {
               "text": "cell proliferation",
               "valence": "UP"
@@ -1054,7 +1072,7 @@
         "is_directional": true,
         "named_ents_both_sides": true,
         "obj": {
-          "ent_id": "n6",
+          "ent_id": "n4",
           "named_ents": [
             {
               "end": 395,
@@ -1103,7 +1121,7 @@
           "valence": "UP"
         },
         "subj": {
-          "ent_id": "n9",
+          "ent_id": "n1",
           "named_ents": [
             {
               "end": 328,
@@ -1150,6 +1168,7 @@
               "text": "BFT",
               "valence": "UP"
             },
+            "level": "phrase",
             "subsequent": {
               "text": "rapid DNA damage in colon epithelial cells",
               "valence": "UP"
@@ -1170,7 +1189,7 @@
         "is_directional": true,
         "named_ents_both_sides": true,
         "obj": {
-          "ent_id": "n4",
+          "ent_id": "n3",
           "named_ents": [
             {
               "end": 430,
@@ -1253,7 +1272,7 @@
           "valence": "UP"
         },
         "subj": {
-          "ent_id": "n10",
+          "ent_id": "n9",
           "named_ents": [
             {
               "end": 400,
@@ -1289,6 +1308,7 @@
               "text": "BFT",
               "valence": "UP"
             },
+            "level": "phrase",
             "subsequent": {
               "text": "vivo",
               "valence": "UP"
@@ -1352,7 +1372,7 @@
           "valence": "UP"
         },
         "subj": {
-          "ent_id": "n10",
+          "ent_id": "n9",
           "named_ents": [
             {
               "end": 400,

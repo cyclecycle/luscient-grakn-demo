@@ -1,0 +1,9 @@
+match $da (antecedent: $ant) isa dynamic_association; $ant (changed: $ent) isa drive_change; $ent isa named_entity has name "BFT"; offset 0; limit 30; get;
+
+match $da (antecedent: $ant, subsequent: $sub) isa dynamic_association; $ant (changed: $ent) isa drive_change; $ent isa named_entity has name "BFT"; $sub (changed: $ent2) isa drive_change; $ent2 isa named_entity has name "polyamine catalyst spermine oxidase"; offset 0; limit 30; get;
+
+match $da (antecedent: $ant, subsequent: $sub) isa dynamic_association; $ant (changed: $ent) isa drive_change; $ent isa named_entity has name "BFT"; $sub (changed: $ent2) isa drive_change; $ent2 isa named_entity has name "ROS"; offset 0; limit 30; get;
+
+match $da (antecedent: $ant, subsequent: $sub) isa dynamic_association; $sub (changed: $ent2) isa drive_change; $ent2 isa named_entity has name "polyamine catalyst spermine oxidase"; offset 0; limit 30; get;
+
+match (antecedent: $ant_change, subsequent: $sub_change) isa dynamic_association; $sub_change (changed: $sub_ent) isa drive_change; $sub_ent isa named_entity has name "ROS"; $sub_drive_changes (changed: $sub_ent, valence: $valence) isa drive_change; $ant_change (changed: $ant_ent) isa drive_change; $ant_ent isa named_entity has name "BFT"; get;

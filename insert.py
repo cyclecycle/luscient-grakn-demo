@@ -7,7 +7,7 @@ from pprint import pprint
 CWD = os.path.abspath(os.path.dirname(__file__))
 DATA_DIR = os.path.join(CWD, 'data')
 PATH = os.path.join(DATA_DIR, 'processed/inf.json')
-KEYSPACE = 'colorectal_cancer4'
+KEYSPACE = 'test1'
 
 
 with open(PATH) as f:
@@ -64,13 +64,10 @@ with grakn.Graph(keyspace=KEYSPACE) as graph:
                 query = '''
                     match
                         $drive_change
-                            (
-                                changed: $named_ent,
-                                valence: $direction
-                            )
-                            isa drive_change;
+                            (changed: $named_ent)
+                            isa drive_change
+                            has valence \"{valence}\";
                         $named_ent id {ent_id};
-                        $direction isa direction has name \"{valence}\";
                     get $drive_change;
                 '''.format(ent_id=ent_id, valence=valence)
                 response = graph.execute(query)
@@ -78,19 +75,16 @@ with grakn.Graph(keyspace=KEYSPACE) as graph:
                     query = '''
                         match
                             $named_ent isa named_entity id {ent_id};
-                            $direction isa direction has name \"{valence}\";
                         insert
                             $drive_change
-                                (
-                                    changed: $named_ent,
-                                    valence: $direction
-                                )
-                                isa drive_change;
+                                (changed: $named_ent)
+                                isa drive_change
+                                has valence \"{valence}\";
                     '''.format(ent_id=ent_id, valence=valence)
                     response = graph.execute(query)
                 for item in response:
                     if item['type'] == 'drive_change':
-                        drive_change_ids[component] = drive_change_id
+                        drive_change_ids[component] = item['id']
                 # pprint(response)
             # Create the dynamic association
             query = '''

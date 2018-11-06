@@ -28,6 +28,9 @@ def process(text):
             'named_entities': True,
             'detect_valence': True,
             'directional_assertions': True,
+            # 'resolve_acros': True,
+            # 'resolve_corefs': True,
+            'markdown_tables': True
         },
     )
     result = r.json()

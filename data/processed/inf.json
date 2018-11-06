@@ -1,222 +1,237 @@
 [
   {
-    "directional_assertions": [
-      {
-        "antecedent": {
-          "text": "BFT",
-          "valence": "UP"
+    "directional_assertions": {
+      "entity_level": [
+        {
+          "antecedent": {
+            "text": "B. fragilis",
+            "valence": "UP"
+          },
+          "level": "ent",
+          "subsequent": {
+            "text": "lytic",
+            "valence": "UP"
+          }
         },
-        "level": "ent",
-        "subsequent": {
-          "text": "cell",
-          "valence": "UP"
-        }
-      },
-      {
-        "antecedent": {
-          "text": "BFT",
-          "valence": "UP"
+        {
+          "antecedent": {
+            "text": "B. fragilis",
+            "valence": "UP"
+          },
+          "level": "ent",
+          "subsequent": {
+            "text": "cell proliferation",
+            "valence": "UP"
+          }
         },
-        "level": "phrase",
-        "subsequent": {
-          "text": "cell lytic activity",
-          "valence": "UP"
-        }
-      },
-      {
-        "antecedent": {
-          "text": "BFT",
-          "valence": "UP"
+        {
+          "antecedent": {
+            "text": "BFT",
+            "valence": "UP"
+          },
+          "level": "ent",
+          "subsequent": {
+            "text": "ions",
+            "valence": "UP"
+          }
         },
-        "level": "ent",
-        "subsequent": {
-          "text": "cell proliferation",
-          "valence": "UP"
-        }
-      },
-      {
-        "antecedent": {
-          "text": "BFT",
-          "valence": "UP"
+        {
+          "antecedent": {
+            "text": "BFT",
+            "valence": "UP"
+          },
+          "level": "ent",
+          "subsequent": {
+            "text": "cIAP2",
+            "valence": "UP"
+          }
         },
-        "level": "phrase",
-        "subsequent": {
-          "text": "cell proliferation",
-          "valence": "UP"
-        }
-      },
-      {
-        "antecedent": {
-          "text": "BFT",
-          "valence": "UP"
+        {
+          "antecedent": {
+            "text": "BFT",
+            "valence": "UP"
+          },
+          "level": "ent",
+          "subsequent": {
+            "text": "polyamine catalyst spermine oxidase",
+            "valence": "UP"
+          }
         },
-        "level": "ent",
-        "subsequent": {
-          "text": "chloride",
-          "valence": "UP"
-        }
-      },
-      {
-        "antecedent": {
-          "text": "BFT",
-          "valence": "UP"
+        {
+          "antecedent": {
+            "text": "polyamine catalyst spermine oxidase",
+            "valence": "UP"
+          },
+          "level": "ent",
+          "subsequent": {
+            "text": "ROS",
+            "valence": "UP"
+          }
         },
-        "level": "phrase",
-        "subsequent": {
-          "text": "barrier permeability with active secretion of chloride ions",
-          "valence": "UP"
-        }
-      },
-      {
-        "antecedent": {
-          "text": "BFT",
-          "valence": "UP"
+        {
+          "antecedent": {
+            "text": "polyamine catalyst spermine oxidase",
+            "valence": "UP"
+          },
+          "level": "ent",
+          "subsequent": {
+            "text": "DNA damage",
+            "valence": "UP"
+          }
         },
-        "level": "ent",
-        "subsequent": {
-          "text": "cIAP2",
-          "valence": "UP"
-        }
-      },
-      {
-        "antecedent": {
-          "text": "BFT",
-          "valence": "UP"
+        {
+          "antecedent": {
+            "text": "polyamine catalyst spermine oxidase",
+            "valence": "UP"
+          },
+          "level": "ent",
+          "subsequent": {
+            "text": "cell proliferation",
+            "valence": "UP"
+          }
         },
-        "level": "phrase",
-        "subsequent": {
-          "text": "the antiapoptotic protein cIAP2",
-          "valence": "UP"
+        {
+          "antecedent": {
+            "text": "BFT",
+            "valence": "UP"
+          },
+          "level": "ent",
+          "subsequent": {
+            "text": "colon",
+            "valence": "UP"
+          }
         }
-      },
-      {
-        "antecedent": {
-          "text": "BFT",
-          "valence": "UP"
+      ],
+      "phrase_level": [
+        {
+          "antecedent": {
+            "text": "B. fragilis toxin",
+            "valence": "UP"
+          },
+          "level": "phrase",
+          "subsequent": {
+            "text": "cell lytic activity",
+            "valence": "UP"
+          }
         },
-        "level": "ent",
-        "subsequent": {
-          "text": "polyamine catalyst spermine oxidase",
-          "valence": "UP"
-        }
-      },
-      {
-        "antecedent": {
-          "text": "BFT",
-          "valence": "UP"
+        {
+          "antecedent": {
+            "text": "B. fragilis toxin",
+            "valence": "UP"
+          },
+          "level": "phrase",
+          "subsequent": {
+            "text": "cell proliferation",
+            "valence": "UP"
+          }
         },
-        "level": "phrase",
-        "subsequent": {
-          "text": "the polyamine catalyst spermine oxidase",
-          "valence": "UP"
-        }
-      },
-      {
-        "antecedent": {
-          "text": "polyamine catalyst spermine oxidase",
-          "valence": "UP"
+        {
+          "antecedent": {
+            "text": "BFT",
+            "valence": "UP"
+          },
+          "level": "phrase",
+          "subsequent": {
+            "text": "barrier permeability with active secretion of chloride ions",
+            "valence": "UP"
+          }
         },
-        "level": "ent",
-        "subsequent": {
-          "text": "ROS",
-          "valence": "UP"
-        }
-      },
-      {
-        "antecedent": {
-          "text": "the polyamine catalyst spermine oxidase which",
-          "valence": "UP"
+        {
+          "antecedent": {
+            "text": "BFT",
+            "valence": "UP"
+          },
+          "level": "phrase",
+          "subsequent": {
+            "text": "the antiapoptotic protein cIAP2",
+            "valence": "UP"
+          }
         },
-        "level": "phrase",
-        "subsequent": {
-          "text": "ROS production",
-          "valence": "UP"
-        }
-      },
-      {
-        "antecedent": {
-          "text": "polyamine catalyst spermine oxidase",
-          "valence": "UP"
+        {
+          "antecedent": {
+            "text": "BFT",
+            "valence": "UP"
+          },
+          "level": "phrase",
+          "subsequent": {
+            "text": "the polyamine catalyst spermine oxidase",
+            "valence": "UP"
+          }
         },
-        "level": "ent",
-        "subsequent": {
-          "text": "DNA damage",
-          "valence": "UP"
-        }
-      },
-      {
-        "antecedent": {
-          "text": "the polyamine catalyst spermine oxidase which",
-          "valence": "UP"
+        {
+          "antecedent": {
+            "text": "the polyamine catalyst spermine oxidase which",
+            "valence": "UP"
+          },
+          "level": "phrase",
+          "subsequent": {
+            "text": "ROS production",
+            "valence": "UP"
+          }
         },
-        "level": "phrase",
-        "subsequent": {
-          "text": "DNA damage",
-          "valence": "UP"
-        }
-      },
-      {
-        "antecedent": {
-          "text": "polyamine catalyst spermine oxidase",
-          "valence": "UP"
+        {
+          "antecedent": {
+            "text": "the polyamine catalyst spermine oxidase which",
+            "valence": "UP"
+          },
+          "level": "phrase",
+          "subsequent": {
+            "text": "DNA damage",
+            "valence": "UP"
+          }
         },
-        "level": "ent",
-        "subsequent": {
-          "text": "cell proliferation",
-          "valence": "UP"
-        }
-      },
-      {
-        "antecedent": {
-          "text": "the polyamine catalyst spermine oxidase which",
-          "valence": "UP"
+        {
+          "antecedent": {
+            "text": "the polyamine catalyst spermine oxidase which",
+            "valence": "UP"
+          },
+          "level": "phrase",
+          "subsequent": {
+            "text": "cell proliferation",
+            "valence": "UP"
+          }
         },
-        "level": "phrase",
-        "subsequent": {
-          "text": "cell proliferation",
-          "valence": "UP"
-        }
-      },
-      {
-        "antecedent": {
-          "text": "BFT",
-          "valence": "UP"
+        {
+          "antecedent": {
+            "text": "BFT",
+            "valence": "UP"
+          },
+          "level": "phrase",
+          "subsequent": {
+            "text": "rapid DNA damage in colon epithelial cells",
+            "valence": "UP"
+          }
         },
-        "level": "ent",
-        "subsequent": {
-          "text": "DNA damage",
-          "valence": "UP"
+        {
+          "antecedent": {
+            "text": "BFT",
+            "valence": "UP"
+          },
+          "level": "phrase",
+          "subsequent": {
+            "text": "vivo",
+            "valence": "UP"
+          }
         }
-      },
-      {
-        "antecedent": {
-          "text": "BFT",
-          "valence": "UP"
-        },
-        "level": "phrase",
-        "subsequent": {
-          "text": "rapid DNA damage in colon epithelial cells",
-          "valence": "UP"
-        }
-      },
-      {
-        "antecedent": {
-          "text": "BFT",
-          "valence": "UP"
-        },
-        "level": "phrase",
-        "subsequent": {
-          "text": "vivo",
-          "valence": "UP"
-        }
-      }
-    ],
+      ]
+    },
     "entity_phrase_relationships": [
       {
-        "directional_assertions": [
-          {
+        "directional_assertions": {
+          "entity_level": {
             "antecedent": {
-              "text": "BFT",
+              "text": "B. fragilis",
+              "valence": "UP"
+            },
+            "level": "ent",
+            "subsequent": {
+              "text": "lytic",
+              "valence": "UP"
+            }
+          },
+          "phrase_level": {
+            "antecedent": {
+              "text": "B. fragilis toxin",
               "valence": "UP"
             },
             "level": "phrase",
@@ -224,49 +239,38 @@
               "text": "cell lytic activity",
               "valence": "UP"
             }
-          },
-          {
-            "antecedent": {
-              "text": "BFT",
-              "valence": "UP"
-            },
-            "level": "ent",
-            "subsequent": {
-              "text": "cell",
-              "valence": "UP"
-            }
           }
-        ],
+        },
         "is_directional": true,
         "named_ents_both_sides": true,
         "obj": {
-          "ent_id": "n5",
+          "ent_id": "n7",
           "named_ents": [
             {
-              "end": 25,
-              "refs": "UMLS:C1269647:T025:ANAT;GO:0005623::COMP;UMLS:C0007634:T025:ANAT",
-              "start": 21,
-              "term": "cell"
+              "end": 45,
+              "refs": "UMLS:C0024348:T046:DISO",
+              "start": 40,
+              "term": "lytic"
             },
             {
-              "end": 31,
-              "refs": "UMLS:C0024348:T046:DISO",
-              "start": 26,
-              "term": "lytic"
+              "end": 39,
+              "refs": "UMLS:C1269647:T025:ANAT;GO:0005623::COMP;UMLS:C0007634:T025:ANAT",
+              "start": 35,
+              "term": "cell"
             }
           ],
           "spans": [
             [
-              21,
-              40
+              35,
+              54
             ]
           ],
           "text": "cell lytic activity",
           "tokens": [
             {
               "span": [
-                21,
-                40
+                35,
+                54
               ],
               "text": "cell lytic activity"
             }
@@ -278,16 +282,16 @@
           "named_ents": [],
           "spans": [
             [
-              4,
-              20
+              18,
+              34
             ]
           ],
           "text": "does not exhibit",
           "tokens": [
             {
               "span": [
-                4,
-                20
+                18,
+                34
               ],
               "text": "does not exhibit"
             }
@@ -295,29 +299,29 @@
           "valence": "UP"
         },
         "subj": {
-          "ent_id": "n9",
+          "ent_id": "n2",
           "named_ents": [
             {
-              "end": 3,
-              "refs": "UNIPROT:P78337:T116:PRGE",
+              "end": 11,
+              "refs": "NCBI:817:T001:SPEC;NCBI:576622:T001:SPEC;NCBI:80304:T001:SPEC;NCBI:271689:T001:SPEC",
               "start": 0,
-              "term": "BFT"
+              "term": "B. fragilis"
             }
           ],
           "spans": [
             [
               0,
-              3
+              17
             ]
           ],
-          "text": "BFT",
+          "text": "B. fragilis toxin",
           "tokens": [
             {
               "span": [
                 0,
-                3
+                17
               ],
-              "text": "BFT"
+              "text": "B. fragilis toxin"
             }
           ],
           "valence": null
@@ -325,21 +329,10 @@
         "voice": "active"
       },
       {
-        "directional_assertions": [
-          {
+        "directional_assertions": {
+          "entity_level": {
             "antecedent": {
-              "text": "BFT",
-              "valence": "UP"
-            },
-            "level": "phrase",
-            "subsequent": {
-              "text": "cell proliferation",
-              "valence": "UP"
-            }
-          },
-          {
-            "antecedent": {
-              "text": "BFT",
+              "text": "B. fragilis",
               "valence": "UP"
             },
             "level": "ent",
@@ -347,32 +340,43 @@
               "text": "cell proliferation",
               "valence": "UP"
             }
+          },
+          "phrase_level": {
+            "antecedent": {
+              "text": "B. fragilis toxin",
+              "valence": "UP"
+            },
+            "level": "phrase",
+            "subsequent": {
+              "text": "cell proliferation",
+              "valence": "UP"
+            }
           }
-        ],
+        },
         "is_directional": true,
         "named_ents_both_sides": true,
         "obj": {
-          "ent_id": "n4",
+          "ent_id": "n0",
           "named_ents": [
             {
-              "end": 80,
+              "end": 94,
               "refs": "GO:0008283::PROC",
-              "start": 62,
+              "start": 76,
               "term": "cell proliferation"
             }
           ],
           "spans": [
             [
-              62,
-              80
+              76,
+              94
             ]
           ],
           "text": "cell proliferation",
           "tokens": [
             {
               "span": [
-                62,
-                80
+                76,
+                94
               ],
               "text": "cell proliferation"
             }
@@ -384,16 +388,16 @@
           "named_ents": [],
           "spans": [
             [
-              46,
-              61
+              60,
+              75
             ]
           ],
           "text": "rather promotes",
           "tokens": [
             {
               "span": [
-                46,
-                61
+                60,
+                75
               ],
               "text": "rather promotes"
             }
@@ -401,29 +405,29 @@
           "valence": "UP"
         },
         "subj": {
-          "ent_id": "n9",
+          "ent_id": "n2",
           "named_ents": [
             {
-              "end": 3,
-              "refs": "UNIPROT:P78337:T116:PRGE",
+              "end": 11,
+              "refs": "NCBI:817:T001:SPEC;NCBI:576622:T001:SPEC;NCBI:80304:T001:SPEC;NCBI:271689:T001:SPEC",
               "start": 0,
-              "term": "BFT"
+              "term": "B. fragilis"
             }
           ],
           "spans": [
             [
               0,
-              3
+              17
             ]
           ],
-          "text": "BFT",
+          "text": "B. fragilis toxin",
           "tokens": [
             {
               "span": [
                 0,
-                3
+                17
               ],
-              "text": "BFT"
+              "text": "B. fragilis toxin"
             }
           ],
           "valence": null
@@ -431,8 +435,19 @@
         "voice": "active"
       },
       {
-        "directional_assertions": [
-          {
+        "directional_assertions": {
+          "entity_level": {
+            "antecedent": {
+              "text": "BFT",
+              "valence": "UP"
+            },
+            "level": "ent",
+            "subsequent": {
+              "text": "ions",
+              "valence": "UP"
+            }
+          },
+          "phrase_level": {
             "antecedent": {
               "text": "BFT",
               "valence": "UP"
@@ -442,99 +457,88 @@
               "text": "barrier permeability with active secretion of chloride ions",
               "valence": "UP"
             }
-          },
-          {
-            "antecedent": {
-              "text": "BFT",
-              "valence": "UP"
-            },
-            "level": "ent",
-            "subsequent": {
-              "text": "chloride",
-              "valence": "UP"
-            }
           }
-        ],
+        },
         "is_directional": true,
         "named_ents_both_sides": true,
         "obj": {
-          "ent_id": "n0",
+          "ent_id": "n11",
           "named_ents": [
             {
-              "end": 150,
-              "refs": "CHEBI:17996:T103:CHED",
-              "start": 142,
-              "term": "chloride"
-            },
-            {
-              "end": 155,
+              "end": 169,
               "refs": "CHEBI:24870:T103:CHED",
-              "start": 151,
+              "start": 165,
               "term": "ions"
             },
             {
-              "end": 138,
+              "end": 164,
+              "refs": "CHEBI:17996:T103:CHED",
+              "start": 156,
+              "term": "chloride"
+            },
+            {
+              "end": 152,
               "refs": "GO:0032940::PROC;UMLS:C0036537:T031:ANAT;GO:0046903::PROC",
-              "start": 129,
+              "start": 143,
               "term": "secretion"
             }
           ],
           "spans": [
             [
-              96,
-              116
+              110,
+              130
             ],
             [
-              117,
-              121
+              131,
+              135
             ],
             [
-              122,
-              138
+              136,
+              152
             ],
             [
-              139,
-              141
-            ],
-            [
-              142,
+              153,
               155
+            ],
+            [
+              156,
+              169
             ]
           ],
           "text": "barrier permeability with active secretion of chloride ions",
           "tokens": [
             {
               "span": [
-                96,
-                116
+                110,
+                130
               ],
               "text": "barrier permeability"
             },
             {
               "span": [
-                117,
-                121
+                131,
+                135
               ],
               "text": "with"
             },
             {
               "span": [
-                122,
-                138
+                136,
+                152
               ],
               "text": "active secretion"
             },
             {
               "span": [
-                139,
-                141
+                153,
+                155
               ],
               "text": "of"
             },
             {
               "span": [
-                142,
-                155
+                156,
+                169
               ],
               "text": "chloride ions"
             }
@@ -546,16 +550,16 @@
           "named_ents": [],
           "spans": [
             [
-              86,
-              95
+              100,
+              109
             ]
           ],
           "text": "increases",
           "tokens": [
             {
               "span": [
-                86,
-                95
+                100,
+                109
               ],
               "text": "increases"
             }
@@ -563,27 +567,27 @@
           "valence": "UP"
         },
         "subj": {
-          "ent_id": "n9",
+          "ent_id": "n1",
           "named_ents": [
             {
-              "end": 85,
+              "end": 99,
               "refs": "UNIPROT:P78337:T116:PRGE",
-              "start": 82,
+              "start": 96,
               "term": "BFT"
             }
           ],
           "spans": [
             [
-              82,
-              85
+              96,
+              99
             ]
           ],
           "text": "BFT",
           "tokens": [
             {
               "span": [
-                82,
-                85
+                96,
+                99
               ],
               "text": "BFT"
             }
@@ -593,19 +597,8 @@
         "voice": "active"
       },
       {
-        "directional_assertions": [
-          {
-            "antecedent": {
-              "text": "BFT",
-              "valence": "UP"
-            },
-            "level": "phrase",
-            "subsequent": {
-              "text": "the antiapoptotic protein cIAP2",
-              "valence": "UP"
-            }
-          },
-          {
+        "directional_assertions": {
+          "entity_level": {
             "antecedent": {
               "text": "BFT",
               "valence": "UP"
@@ -615,38 +608,49 @@
               "text": "cIAP2",
               "valence": "UP"
             }
+          },
+          "phrase_level": {
+            "antecedent": {
+              "text": "BFT",
+              "valence": "UP"
+            },
+            "level": "phrase",
+            "subsequent": {
+              "text": "the antiapoptotic protein cIAP2",
+              "valence": "UP"
+            }
           }
-        ],
+        },
         "is_directional": true,
         "named_ents_both_sides": true,
         "obj": {
-          "ent_id": "n6",
+          "ent_id": "n3",
           "named_ents": [
             {
-              "end": 284,
+              "end": 298,
               "refs": "UNIPROT:Q13489:T116:PRGE;UNIPROT:Q13490:T116:PRGE",
-              "start": 279,
+              "start": 293,
               "term": "cIAP2"
             },
             {
-              "end": 278,
+              "end": 292,
               "refs": "CHEBI:16541:T103:CHED;CHEBI:36080:T103:CHED",
-              "start": 271,
+              "start": 285,
               "term": "protein"
             }
           ],
           "spans": [
             [
-              253,
-              284
+              267,
+              298
             ]
           ],
           "text": "the antiapoptotic protein cIAP2",
           "tokens": [
             {
               "span": [
-                253,
-                284
+                267,
+                298
               ],
               "text": "the antiapoptotic protein cIAP2"
             }
@@ -658,16 +662,16 @@
           "named_ents": [],
           "spans": [
             [
-              245,
-              252
+              259,
+              266
             ]
           ],
           "text": "induces",
           "tokens": [
             {
               "span": [
-                245,
-                252
+                259,
+                266
               ],
               "text": "induces"
             }
@@ -675,27 +679,27 @@
           "valence": "UP"
         },
         "subj": {
-          "ent_id": "n9",
+          "ent_id": "n1",
           "named_ents": [
             {
-              "end": 244,
+              "end": 258,
               "refs": "UNIPROT:P78337:T116:PRGE",
-              "start": 241,
+              "start": 255,
               "term": "BFT"
             }
           ],
           "spans": [
             [
-              241,
-              244
+              255,
+              258
             ]
           ],
           "text": "BFT",
           "tokens": [
             {
               "span": [
-                241,
-                244
+                255,
+                258
               ],
               "text": "BFT"
             }
@@ -705,19 +709,8 @@
         "voice": "active"
       },
       {
-        "directional_assertions": [
-          {
-            "antecedent": {
-              "text": "BFT",
-              "valence": "UP"
-            },
-            "level": "phrase",
-            "subsequent": {
-              "text": "the polyamine catalyst spermine oxidase",
-              "valence": "UP"
-            }
-          },
-          {
+        "directional_assertions": {
+          "entity_level": {
             "antecedent": {
               "text": "BFT",
               "valence": "UP"
@@ -727,32 +720,43 @@
               "text": "polyamine catalyst spermine oxidase",
               "valence": "UP"
             }
+          },
+          "phrase_level": {
+            "antecedent": {
+              "text": "BFT",
+              "valence": "UP"
+            },
+            "level": "phrase",
+            "subsequent": {
+              "text": "the polyamine catalyst spermine oxidase",
+              "valence": "UP"
+            }
           }
-        ],
+        },
         "is_directional": true,
         "named_ents_both_sides": true,
         "obj": {
-          "ent_id": "n10",
+          "ent_id": "n6",
           "named_ents": [
             {
-              "end": 328,
+              "end": 342,
               "refs": "UNIPROT:Q15042:T116:PRGE",
-              "start": 293,
+              "start": 307,
               "term": "polyamine catalyst spermine oxidase"
             }
           ],
           "spans": [
             [
-              289,
-              328
+              303,
+              342
             ]
           ],
           "text": "the polyamine catalyst spermine oxidase",
           "tokens": [
             {
               "span": [
-                289,
-                328
+                303,
+                342
               ],
               "text": "the polyamine catalyst spermine oxidase"
             }
@@ -764,16 +768,16 @@
           "named_ents": [],
           "spans": [
             [
-              245,
-              252
+              259,
+              266
             ]
           ],
           "text": "induces",
           "tokens": [
             {
               "span": [
-                245,
-                252
+                259,
+                266
               ],
               "text": "induces"
             }
@@ -781,27 +785,27 @@
           "valence": "UP"
         },
         "subj": {
-          "ent_id": "n9",
+          "ent_id": "n1",
           "named_ents": [
             {
-              "end": 244,
+              "end": 258,
               "refs": "UNIPROT:P78337:T116:PRGE",
-              "start": 241,
+              "start": 255,
               "term": "BFT"
             }
           ],
           "spans": [
             [
-              241,
-              244
+              255,
+              258
             ]
           ],
           "text": "BFT",
           "tokens": [
             {
               "span": [
-                241,
-                244
+                255,
+                258
               ],
               "text": "BFT"
             }
@@ -811,19 +815,8 @@
         "voice": "active"
       },
       {
-        "directional_assertions": [
-          {
-            "antecedent": {
-              "text": "the polyamine catalyst spermine oxidase which",
-              "valence": "UP"
-            },
-            "level": "phrase",
-            "subsequent": {
-              "text": "ROS production",
-              "valence": "UP"
-            }
-          },
-          {
+        "directional_assertions": {
+          "entity_level": {
             "antecedent": {
               "text": "polyamine catalyst spermine oxidase",
               "valence": "UP"
@@ -833,32 +826,43 @@
               "text": "ROS",
               "valence": "UP"
             }
+          },
+          "phrase_level": {
+            "antecedent": {
+              "text": "the polyamine catalyst spermine oxidase which",
+              "valence": "UP"
+            },
+            "level": "phrase",
+            "subsequent": {
+              "text": "ROS production",
+              "valence": "UP"
+            }
           }
-        ],
+        },
         "is_directional": true,
         "named_ents_both_sides": true,
         "obj": {
-          "ent_id": "n2",
+          "ent_id": "n5",
           "named_ents": [
             {
-              "end": 348,
+              "end": 362,
               "refs": "CHEBI:26523:T103:CHED",
-              "start": 345,
+              "start": 359,
               "term": "ROS"
             }
           ],
           "spans": [
             [
-              345,
-              359
+              359,
+              373
             ]
           ],
           "text": "ROS production",
           "tokens": [
             {
               "span": [
-                345,
-                359
+                359,
+                373
               ],
               "text": "ROS production"
             }
@@ -870,16 +874,16 @@
           "named_ents": [],
           "spans": [
             [
-              336,
-              344
+              350,
+              358
             ]
           ],
           "text": "triggers",
           "tokens": [
             {
               "span": [
-                336,
-                344
+                350,
+                358
               ],
               "text": "triggers"
             }
@@ -887,38 +891,38 @@
           "valence": "UP"
         },
         "subj": {
-          "ent_id": "n1",
+          "ent_id": "n8",
           "named_ents": [
             {
-              "end": 328,
+              "end": 342,
               "refs": "UNIPROT:Q15042:T116:PRGE",
-              "start": 293,
+              "start": 307,
               "term": "polyamine catalyst spermine oxidase"
             }
           ],
           "spans": [
             [
-              289,
-              328
+              303,
+              342
             ],
             [
-              330,
-              335
+              344,
+              349
             ]
           ],
           "text": "the polyamine catalyst spermine oxidase which",
           "tokens": [
             {
               "span": [
-                289,
-                328
+                303,
+                342
               ],
               "text": "the polyamine catalyst spermine oxidase"
             },
             {
               "span": [
-                330,
-                335
+                344,
+                349
               ],
               "text": "which"
             }
@@ -928,19 +932,8 @@
         "voice": "active"
       },
       {
-        "directional_assertions": [
-          {
-            "antecedent": {
-              "text": "the polyamine catalyst spermine oxidase which",
-              "valence": "UP"
-            },
-            "level": "phrase",
-            "subsequent": {
-              "text": "DNA damage",
-              "valence": "UP"
-            }
-          },
-          {
+        "directional_assertions": {
+          "entity_level": {
             "antecedent": {
               "text": "polyamine catalyst spermine oxidase",
               "valence": "UP"
@@ -950,32 +943,43 @@
               "text": "DNA damage",
               "valence": "UP"
             }
+          },
+          "phrase_level": {
+            "antecedent": {
+              "text": "the polyamine catalyst spermine oxidase which",
+              "valence": "UP"
+            },
+            "level": "phrase",
+            "subsequent": {
+              "text": "DNA damage",
+              "valence": "UP"
+            }
           }
-        ],
+        },
         "is_directional": true,
         "named_ents_both_sides": true,
         "obj": {
-          "ent_id": "n8",
+          "ent_id": "n9",
           "named_ents": [
             {
-              "end": 371,
+              "end": 385,
               "refs": "UMLS:C0012860:T049:DISO",
-              "start": 361,
+              "start": 375,
               "term": "DNA damage"
             }
           ],
           "spans": [
             [
-              361,
-              371
+              375,
+              385
             ]
           ],
           "text": "DNA damage",
           "tokens": [
             {
               "span": [
-                361,
-                371
+                375,
+                385
               ],
               "text": "DNA damage"
             }
@@ -987,16 +991,16 @@
           "named_ents": [],
           "spans": [
             [
-              336,
-              344
+              350,
+              358
             ]
           ],
           "text": "triggers",
           "tokens": [
             {
               "span": [
-                336,
-                344
+                350,
+                358
               ],
               "text": "triggers"
             }
@@ -1004,38 +1008,38 @@
           "valence": "UP"
         },
         "subj": {
-          "ent_id": "n1",
+          "ent_id": "n8",
           "named_ents": [
             {
-              "end": 328,
+              "end": 342,
               "refs": "UNIPROT:Q15042:T116:PRGE",
-              "start": 293,
+              "start": 307,
               "term": "polyamine catalyst spermine oxidase"
             }
           ],
           "spans": [
             [
-              289,
-              328
+              303,
+              342
             ],
             [
-              330,
-              335
+              344,
+              349
             ]
           ],
           "text": "the polyamine catalyst spermine oxidase which",
           "tokens": [
             {
               "span": [
-                289,
-                328
+                303,
+                342
               ],
               "text": "the polyamine catalyst spermine oxidase"
             },
             {
               "span": [
-                330,
-                335
+                344,
+                349
               ],
               "text": "which"
             }
@@ -1045,19 +1049,8 @@
         "voice": "active"
       },
       {
-        "directional_assertions": [
-          {
-            "antecedent": {
-              "text": "the polyamine catalyst spermine oxidase which",
-              "valence": "UP"
-            },
-            "level": "phrase",
-            "subsequent": {
-              "text": "cell proliferation",
-              "valence": "UP"
-            }
-          },
-          {
+        "directional_assertions": {
+          "entity_level": {
             "antecedent": {
               "text": "polyamine catalyst spermine oxidase",
               "valence": "UP"
@@ -1067,32 +1060,43 @@
               "text": "cell proliferation",
               "valence": "UP"
             }
+          },
+          "phrase_level": {
+            "antecedent": {
+              "text": "the polyamine catalyst spermine oxidase which",
+              "valence": "UP"
+            },
+            "level": "phrase",
+            "subsequent": {
+              "text": "cell proliferation",
+              "valence": "UP"
+            }
           }
-        ],
+        },
         "is_directional": true,
         "named_ents_both_sides": true,
         "obj": {
-          "ent_id": "n4",
+          "ent_id": "n0",
           "named_ents": [
             {
-              "end": 395,
+              "end": 409,
               "refs": "GO:0008283::PROC",
-              "start": 377,
+              "start": 391,
               "term": "cell proliferation"
             }
           ],
           "spans": [
             [
-              377,
-              395
+              391,
+              409
             ]
           ],
           "text": "cell proliferation",
           "tokens": [
             {
               "span": [
-                377,
-                395
+                391,
+                409
               ],
               "text": "cell proliferation"
             }
@@ -1104,16 +1108,16 @@
           "named_ents": [],
           "spans": [
             [
-              336,
-              344
+              350,
+              358
             ]
           ],
           "text": "triggers",
           "tokens": [
             {
               "span": [
-                336,
-                344
+                350,
+                358
               ],
               "text": "triggers"
             }
@@ -1121,38 +1125,38 @@
           "valence": "UP"
         },
         "subj": {
-          "ent_id": "n1",
+          "ent_id": "n8",
           "named_ents": [
             {
-              "end": 328,
+              "end": 342,
               "refs": "UNIPROT:Q15042:T116:PRGE",
-              "start": 293,
+              "start": 307,
               "term": "polyamine catalyst spermine oxidase"
             }
           ],
           "spans": [
             [
-              289,
-              328
+              303,
+              342
             ],
             [
-              330,
-              335
+              344,
+              349
             ]
           ],
           "text": "the polyamine catalyst spermine oxidase which",
           "tokens": [
             {
               "span": [
-                289,
-                328
+                303,
+                342
               ],
               "text": "the polyamine catalyst spermine oxidase"
             },
             {
               "span": [
-                330,
-                335
+                344,
+                349
               ],
               "text": "which"
             }
@@ -1162,8 +1166,19 @@
         "voice": "active"
       },
       {
-        "directional_assertions": [
-          {
+        "directional_assertions": {
+          "entity_level": {
+            "antecedent": {
+              "text": "BFT",
+              "valence": "UP"
+            },
+            "level": "ent",
+            "subsequent": {
+              "text": "colon",
+              "valence": "UP"
+            }
+          },
+          "phrase_level": {
             "antecedent": {
               "text": "BFT",
               "valence": "UP"
@@ -1173,77 +1188,66 @@
               "text": "rapid DNA damage in colon epithelial cells",
               "valence": "UP"
             }
-          },
-          {
-            "antecedent": {
-              "text": "BFT",
-              "valence": "UP"
-            },
-            "level": "ent",
-            "subsequent": {
-              "text": "DNA damage",
-              "valence": "UP"
-            }
           }
-        ],
+        },
         "is_directional": true,
         "named_ents_both_sides": true,
         "obj": {
-          "ent_id": "n3",
+          "ent_id": "n4",
           "named_ents": [
             {
-              "end": 430,
-              "refs": "UMLS:C0012860:T049:DISO",
-              "start": 420,
-              "term": "DNA damage"
+              "end": 453,
+              "refs": "UMLS:C0009368:T023:ANAT;UMLS:C1281569:T023:ANAT",
+              "start": 448,
+              "term": "colon"
             },
             {
-              "end": 456,
+              "end": 470,
               "refs": "UMLS:C0014597:T025:ANAT",
-              "start": 440,
+              "start": 454,
               "term": "epithelial cells"
             },
             {
-              "end": 439,
-              "refs": "UMLS:C0009368:T023:ANAT;UMLS:C1281569:T023:ANAT",
+              "end": 444,
+              "refs": "UMLS:C0012860:T049:DISO",
               "start": 434,
-              "term": "colon"
+              "term": "DNA damage"
             }
           ],
           "spans": [
             [
-              414,
-              430
+              428,
+              444
             ],
             [
-              431,
-              433
+              445,
+              447
             ],
             [
-              434,
-              456
+              448,
+              470
             ]
           ],
           "text": "rapid DNA damage in colon epithelial cells",
           "tokens": [
             {
               "span": [
-                414,
-                430
+                428,
+                444
               ],
               "text": "rapid DNA damage"
             },
             {
               "span": [
-                431,
-                433
+                445,
+                447
               ],
               "text": "in"
             },
             {
               "span": [
-                434,
-                456
+                448,
+                470
               ],
               "text": "colon epithelial cells"
             }
@@ -1255,16 +1259,16 @@
           "named_ents": [],
           "spans": [
             [
-              401,
-              413
+              415,
+              427
             ]
           ],
           "text": "also induces",
           "tokens": [
             {
               "span": [
-                401,
-                413
+                415,
+                427
               ],
               "text": "also induces"
             }
@@ -1272,27 +1276,27 @@
           "valence": "UP"
         },
         "subj": {
-          "ent_id": "n9",
+          "ent_id": "n1",
           "named_ents": [
             {
-              "end": 400,
+              "end": 414,
               "refs": "UNIPROT:P78337:T116:PRGE",
-              "start": 397,
+              "start": 411,
               "term": "BFT"
             }
           ],
           "spans": [
             [
-              397,
-              400
+              411,
+              414
             ]
           ],
           "text": "BFT",
           "tokens": [
             {
               "span": [
-                397,
-                400
+                411,
+                414
               ],
               "text": "BFT"
             }
@@ -1302,8 +1306,8 @@
         "voice": "active"
       },
       {
-        "directional_assertions": [
-          {
+        "directional_assertions": {
+          "phrase_level": {
             "antecedent": {
               "text": "BFT",
               "valence": "UP"
@@ -1313,26 +1317,25 @@
               "text": "vivo",
               "valence": "UP"
             }
-          },
-          null
-        ],
+          }
+        },
         "is_directional": true,
         "named_ents_both_sides": false,
         "obj": {
-          "ent_id": "n7",
+          "ent_id": "n10",
           "named_ents": [],
           "spans": [
             [
-              460,
-              464
+              474,
+              478
             ]
           ],
           "text": "vivo",
           "tokens": [
             {
               "span": [
-                460,
-                464
+                474,
+                478
               ],
               "text": "vivo"
             }
@@ -1344,27 +1347,27 @@
           "named_ents": [],
           "spans": [
             [
-              401,
-              413
+              415,
+              427
             ],
             [
-              457,
-              459
+              471,
+              473
             ]
           ],
           "text": "also induces in",
           "tokens": [
             {
               "span": [
-                401,
-                413
+                415,
+                427
               ],
               "text": "also induces"
             },
             {
               "span": [
-                457,
-                459
+                471,
+                473
               ],
               "text": "in"
             }
@@ -1372,27 +1375,27 @@
           "valence": "UP"
         },
         "subj": {
-          "ent_id": "n9",
+          "ent_id": "n1",
           "named_ents": [
             {
-              "end": 400,
+              "end": 414,
               "refs": "UNIPROT:P78337:T116:PRGE",
-              "start": 397,
+              "start": 411,
               "term": "BFT"
             }
           ],
           "spans": [
             [
-              397,
-              400
+              411,
+              414
             ]
           ],
           "text": "BFT",
           "tokens": [
             {
               "span": [
-                397,
-                400
+                411,
+                414
               ],
               "text": "BFT"
             }
@@ -1402,152 +1405,155 @@
         "voice": "active"
       }
     ],
+    "markdown_tables": {
+      "entity_phrase_relationships": "| Entity phrase left | Relation | Entity phrase right |\n|---|---|---|\n| B. fragilis toxin | does not exhibit | cell lytic activity |\n| B. fragilis toxin | rather promotes | cell proliferation |\n| BFT | increases | barrier permeability with active secretion of chloride ions |\n| BFT | induces | the antiapoptotic protein cIAP2 |\n| BFT | induces | the polyamine catalyst spermine oxidase |\n| the polyamine catalyst spermine oxidase which | triggers | ROS production |\n| the polyamine catalyst spermine oxidase which | triggers | DNA damage |\n| the polyamine catalyst spermine oxidase which | triggers | cell proliferation |\n| BFT | also induces | rapid DNA damage in colon epithelial cells |\n| BFT | also induces in | vivo |"
+    },
     "named_entites": [
       {
-        "end": 25,
-        "refs": "UMLS:C1269647:T025:ANAT;GO:0005623::COMP;UMLS:C0007634:T025:ANAT",
-        "start": 21,
-        "term": "cell"
-      },
-      {
-        "end": 551,
-        "refs": "GO:0006281::PROC",
-        "start": 541,
-        "term": "DNA repair"
-      },
-      {
-        "end": 371,
-        "refs": "UMLS:C0012860:T049:DISO",
-        "start": 361,
-        "term": "DNA damage"
-      },
-      {
-        "end": 395,
+        "end": 409,
         "refs": "GO:0008283::PROC",
-        "start": 377,
+        "start": 391,
         "term": "cell proliferation"
       },
       {
-        "end": 328,
-        "refs": "UNIPROT:Q15042:T116:PRGE",
-        "start": 293,
-        "term": "polyamine catalyst spermine oxidase"
-      },
-      {
-        "end": 190,
-        "refs": "UMLS:C0011991:T184:DISO",
-        "start": 182,
-        "term": "diarrhea"
-      },
-      {
-        "end": 400,
-        "refs": "UNIPROT:P78337:T116:PRGE",
-        "start": 397,
-        "term": "BFT"
-      },
-      {
-        "end": 430,
-        "refs": "UMLS:C0012860:T049:DISO",
-        "start": 420,
-        "term": "DNA damage"
-      },
-      {
-        "end": 284,
-        "refs": "UNIPROT:Q13489:T116:PRGE;UNIPROT:Q13490:T116:PRGE",
-        "start": 279,
-        "term": "cIAP2"
-      },
-      {
-        "end": 85,
-        "refs": "UNIPROT:P78337:T116:PRGE",
-        "start": 82,
-        "term": "BFT"
-      },
-      {
-        "end": 220,
-        "refs": "UMLS:C0742596:T047:DISO",
-        "start": 202,
-        "term": "colon inflammation"
-      },
-      {
-        "end": 150,
-        "refs": "CHEBI:17996:T103:CHED",
-        "start": 142,
-        "term": "chloride"
-      },
-      {
-        "end": 3,
-        "refs": "UNIPROT:P78337:T116:PRGE",
-        "start": 0,
-        "term": "BFT"
-      },
-      {
-        "end": 348,
-        "refs": "CHEBI:26523:T103:CHED",
-        "start": 345,
-        "term": "ROS"
-      },
-      {
-        "end": 244,
-        "refs": "UNIPROT:P78337:T116:PRGE",
-        "start": 241,
-        "term": "BFT"
-      },
-      {
-        "end": 31,
-        "refs": "UMLS:C0024348:T046:DISO",
-        "start": 26,
-        "term": "lytic"
-      },
-      {
-        "end": 513,
-        "refs": "UNIPROT:Q16777:T116:PRGE",
-        "start": 495,
-        "term": "H2A histone family"
-      },
-      {
-        "end": 155,
+        "end": 169,
         "refs": "CHEBI:24870:T103:CHED",
-        "start": 151,
+        "start": 165,
         "term": "ions"
       },
       {
-        "end": 456,
-        "refs": "UMLS:C0014597:T025:ANAT",
-        "start": 440,
-        "term": "epithelial cells"
+        "end": 453,
+        "refs": "UMLS:C0009368:T023:ANAT;UMLS:C1281569:T023:ANAT",
+        "start": 448,
+        "term": "colon"
       },
       {
-        "end": 138,
-        "refs": "GO:0032940::PROC;UMLS:C0036537:T031:ANAT;GO:0046903::PROC",
-        "start": 129,
-        "term": "secretion"
+        "end": 527,
+        "refs": "UNIPROT:Q16777:T116:PRGE",
+        "start": 509,
+        "term": "H2A histone family"
       },
       {
-        "end": 80,
+        "end": 298,
+        "refs": "UNIPROT:Q13489:T116:PRGE;UNIPROT:Q13490:T116:PRGE",
+        "start": 293,
+        "term": "cIAP2"
+      },
+      {
+        "end": 258,
+        "refs": "UNIPROT:P78337:T116:PRGE",
+        "start": 255,
+        "term": "BFT"
+      },
+      {
+        "end": 94,
         "refs": "GO:0008283::PROC",
-        "start": 62,
+        "start": 76,
         "term": "cell proliferation"
       },
       {
-        "end": 239,
-        "refs": "UMLS:C0596263:T191:DISO",
-        "start": 225,
-        "term": "carcinogenesis"
+        "end": 470,
+        "refs": "UMLS:C0014597:T025:ANAT",
+        "start": 454,
+        "term": "epithelial cells"
       },
       {
-        "end": 278,
+        "end": 45,
+        "refs": "UMLS:C0024348:T046:DISO",
+        "start": 40,
+        "term": "lytic"
+      },
+      {
+        "end": 385,
+        "refs": "UMLS:C0012860:T049:DISO",
+        "start": 375,
+        "term": "DNA damage"
+      },
+      {
+        "end": 565,
+        "refs": "GO:0006281::PROC",
+        "start": 555,
+        "term": "DNA repair"
+      },
+      {
+        "end": 39,
+        "refs": "UMLS:C1269647:T025:ANAT;GO:0005623::COMP;UMLS:C0007634:T025:ANAT",
+        "start": 35,
+        "term": "cell"
+      },
+      {
+        "end": 342,
+        "refs": "UNIPROT:Q15042:T116:PRGE",
+        "start": 307,
+        "term": "polyamine catalyst spermine oxidase"
+      },
+      {
+        "end": 204,
+        "refs": "UMLS:C0011991:T184:DISO",
+        "start": 196,
+        "term": "diarrhea"
+      },
+      {
+        "end": 444,
+        "refs": "UMLS:C0012860:T049:DISO",
+        "start": 434,
+        "term": "DNA damage"
+      },
+      {
+        "end": 11,
+        "refs": "NCBI:817:T001:SPEC;NCBI:576622:T001:SPEC;NCBI:80304:T001:SPEC;NCBI:271689:T001:SPEC",
+        "start": 0,
+        "term": "B. fragilis"
+      },
+      {
+        "end": 99,
+        "refs": "UNIPROT:P78337:T116:PRGE",
+        "start": 96,
+        "term": "BFT"
+      },
+      {
+        "end": 292,
         "refs": "CHEBI:16541:T103:CHED;CHEBI:36080:T103:CHED",
-        "start": 271,
+        "start": 285,
         "term": "protein"
       },
       {
-        "end": 439,
-        "refs": "UMLS:C0009368:T023:ANAT;UMLS:C1281569:T023:ANAT",
-        "start": 434,
-        "term": "colon"
+        "end": 164,
+        "refs": "CHEBI:17996:T103:CHED",
+        "start": 156,
+        "term": "chloride"
+      },
+      {
+        "end": 152,
+        "refs": "GO:0032940::PROC;UMLS:C0036537:T031:ANAT;GO:0046903::PROC",
+        "start": 143,
+        "term": "secretion"
+      },
+      {
+        "end": 234,
+        "refs": "UMLS:C0742596:T047:DISO",
+        "start": 216,
+        "term": "colon inflammation"
+      },
+      {
+        "end": 414,
+        "refs": "UNIPROT:P78337:T116:PRGE",
+        "start": 411,
+        "term": "BFT"
+      },
+      {
+        "end": 253,
+        "refs": "UMLS:C0596263:T191:DISO",
+        "start": 239,
+        "term": "carcinogenesis"
+      },
+      {
+        "end": 362,
+        "refs": "CHEBI:26523:T103:CHED",
+        "start": 359,
+        "term": "ROS"
       }
     ],
-    "preprocessed_text": "BFT does not exhibit cell lytic activity, but rather promotes cell proliferation. BFT increases barrier permeability with active secretion of chloride ions, actions known to promote diarrhea as well as colon inflammation and carcinogenesis. BFT induces the antiapoptotic protein cIAP2 and the polyamine catalyst spermine oxidase, which triggers ROS production, DNA damage, and cell proliferation. BFT also induces rapid DNA damage in colon epithelial cells in vivo, as detected by activation of H2A histone family, member X, an initiator of DNA repair."
+    "preprocessed_text": "B. fragilis toxin does not exhibit cell lytic activity, but rather promotes cell proliferation. BFT increases barrier permeability with active secretion of chloride ions, actions known to promote diarrhea as well as colon inflammation and carcinogenesis. BFT induces the antiapoptotic protein cIAP2 and the polyamine catalyst spermine oxidase, which triggers ROS production, DNA damage, and cell proliferation. BFT also induces rapid DNA damage in colon epithelial cells in vivo, as detected by activation of H2A histone family, member X, an initiator of DNA repair."
   }
 ]

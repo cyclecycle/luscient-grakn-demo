@@ -7,7 +7,7 @@ from pprint import pprint
 CWD = os.path.abspath(os.path.dirname(__file__))
 DATA_DIR = os.path.join(CWD, 'data')
 PATH = os.path.join(DATA_DIR, 'processed/inf.json')
-KEYSPACE = 'test1'
+KEYSPACE = 'bft'
 
 
 with open(PATH) as f:
@@ -48,15 +48,15 @@ with grakn.Graph(keyspace=KEYSPACE) as graph:
             response = graph.execute(query)
         #     pprint(response)
     for result in results:
-        for directional_assertion in result['directional_assertions']:
-            if not directional_assertion['level'] == 'ent':
+        for drive_change_relationships in result['drive_change_relationships']:
+            if not drive_change_relationships['level'] == 'ent':
                 continue
             # First insert the drive_change event for each side of the dynamic association
             drive_change_ids = {}
             for component in {'antecedent', 'subsequent'}:
-                ent_name = directional_assertion[component]['text']
-                valence = directional_assertion[component]['valence']
-                # Get if the ent if it already exists
+                ent_name = drive_change_relationships[component]['text']
+                valence = drive_change_relationships[component]['valence']
+                # Get the ent if it already exists
                 response = graph.match_or_insert('$ent isa named_entity has name \"{}\"'.format(
                     ent_name))
                 ent_id = response[0]['id']
@@ -85,6 +85,32 @@ with grakn.Graph(keyspace=KEYSPACE) as graph:
                 for item in response:
                     if item['type'] == 'drive_change':
                         drive_change_ids[component] = item['id']
+                # Create the opposite drive change is doesn't exist. This is for use in the converse inference rules
+                if valence == 'UP':
+                    valence_conv = 'DOWN'
+                elif valence == 'DOWN':
+                    valence_conv = 'UP'
+                query = '''
+                    match
+                        $drive_change
+                            (changed: $named_ent)
+                            isa drive_change
+                            has valence \"{valence}\";
+                        $named_ent id {ent_id};
+                    get $drive_change;
+                '''.format(ent_id=ent_id, valence=valence_conv)
+                response = graph.execute(query)
+                if not response:
+                    query = '''
+                        match
+                            $named_ent isa named_entity id {ent_id};
+                        insert
+                            $drive_change
+                                (changed: $named_ent)
+                                isa drive_change
+                                has valence \"{valence}\";
+                    '''.format(ent_id=ent_id, valence=valence_conv)
+                    response = graph.execute(query)
                 # pprint(response)
             # Create the dynamic association
             query = '''
@@ -104,4 +130,6 @@ with grakn.Graph(keyspace=KEYSPACE) as graph:
                 )
             response = graph.execute(query)
             pprint(response)
+    # For each ent, create the opposite drive change, for use in converse inference
+
     graph.commit()

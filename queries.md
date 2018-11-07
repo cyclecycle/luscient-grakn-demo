@@ -1,1 +1,0 @@
-match $da (antecedent: $ant) isa dynamic_association; $ant (changed: $ent) isa drive_change; $ent isa named_entity has name "BFT"; offset 0; limit 30; get;

@@ -41,12 +41,79 @@ match $da (antecedent: $ant, subsequent: $sub) isa dynamic_association; $cascade
 
 insert (antecedent: $ant, subsequent: $sub2) isa dynamic_association;
 
-
-
 #
 
 match $da (antecedent: $ant, subsequent: $sub) isa dynamic_association; $ant (changed: $ant_ent) isa drive_change; $ent isa named_entity has name "BFT"; $sub (changed: $sub_ent) isa drive_change; $sub_ent isa named_entity has name "ROS"; offset 0; limit 30; get;
 
+# subsequents of BFT
+
+match $da (antecedent: $ant, subsequent: $sub) isa dynamic_association; $ant (changed: $ant_ent) isa drive_change; $ent isa named_entity has name $ant_ent_name; $ant_ent_name "BFT"; $sub (changed: $sub_ent) isa drive_change; $sub_ent isa named_entity has name $sub_ent_name; offset 0; limit 30; get $ant_ent_name, $sub_ent_name;
+
+# Subsequents of BFT increase
+
+match $da (antecedent: $ant, subsequent: $sub) isa dynamic_association; $ant (changed: $ant_ent) isa drive_change; $ent isa named_entity has name $ant_ent_name; $ant_ent_name "BFT"; $sub (changed: $sub_ent) isa drive_change; $sub_ent isa named_entity has name $sub_ent_name; offset 0; limit 30; get $ant_ent_name, $sub_ent_name;
+
+# For a da, get the ant and sub valences, and create a new da with the same ents but the opposite valences.
+
+## UP UP becomes DOWN DOWN
+
+when {
+    $da (antecedent: $ant, subsequent: $sub) isa dynamic_association;
+    $ant (named_entity: $ant_ent, valence: $ant_valence) isa drive_change;
+    $sub (named_entity: $sub_ent, valence: $sub_valence) isa drive_change;
+    $ant_valence "UP";
+    $sub_valence "UP";
+}
+then {
+    $ant (named_entity: $ant_ent, valence: "DOWN") isa drive_change;
+    $sub (named_entity: $sub_ent, valence: "DOWN") isa drive_change;
+    $da_conv (antecedent: $ant, subsequent: $sub) isa dynamic_association;
+}
+
+## UP DOWN becomes DOWN UP
+
+when {
+    $da (antecedent: $ant, subsequent: $sub) isa dynamic_association;
+    $ant (named_entity: $ant_ent, valence: $ant_valence) isa drive_change;
+    $sub (named_entity: $sub_ent, valence: $sub_valence) isa drive_change;
+    $ant_valence "UP";
+    $sub_valence "DOWN";
+}
+then {
+    $ant (named_entity: $ant_ent, valence: "DOWN") isa drive_change;
+    $sub (named_entity: $sub_ent, valence: "UP") isa drive_change;
+    $da_conv (antecedent: $ant, subsequent: $sub) isa dynamic_association;
+}
+
+## DOWN UP becomes UP DOWN
+
+when {
+    $da (antecedent: $ant, subsequent: $sub) isa dynamic_association;
+    $ant (named_entity: $ant_ent, valence: $ant_valence) isa drive_change;
+    $sub (named_entity: $sub_ent, valence: $sub_valence) isa drive_change;
+    $ant_valence "DOWN";
+    $sub_valence "UP";
+}
+then {
+    $ant (named_entity: $ant_ent, valence: "UP") isa drive_change;
+    $sub (named_entity: $sub_ent, valence: "DOWN") isa drive_change;
+    $da_conv (antecedent: $ant, subsequent: $sub) isa dynamic_association;
+}
+
+## DOWN DOWN becomes UP UP
+
+when {
+    $da (antecedent: $ant, subsequent: $sub) isa dynamic_association;
+    $ant (named_entity: $ant_ent, valence: $ant_valence) isa drive_change;
+    $sub (named_entity: $sub_ent, valence: $sub_valence) isa drive_change;
+    $ant_valence "DOWN";
+    $sub_valence "DOWN";
+}
+then {
+    $ant (named_entity: $ant_ent, valence: "UP") isa drive_change;
+    $sub (named_entity: $sub_ent, valence: "UP") isa drive_change;
+    $da_conv (antecedent: $ant, subsequent: $sub) isa dynamic_association;
+}
 
 #
 

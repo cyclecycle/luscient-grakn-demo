@@ -1,6 +1,6 @@
 [
   {
-    "directional_assertions": {
+    "drive_change_relationships": {
       "entity_level": [
         {
           "antecedent": {
@@ -217,7 +217,7 @@
     },
     "entity_phrase_relationships": [
       {
-        "directional_assertions": {
+        "drive_change_relationships": {
           "entity_level": {
             "antecedent": {
               "text": "B. fragilis",
@@ -244,7 +244,7 @@
         "is_directional": true,
         "named_ents_both_sides": true,
         "obj": {
-          "ent_id": "n7",
+          "ent_id": "n9",
           "named_ents": [
             {
               "end": 45,
@@ -299,7 +299,7 @@
           "valence": "UP"
         },
         "subj": {
-          "ent_id": "n2",
+          "ent_id": "n8",
           "named_ents": [
             {
               "end": 11,
@@ -329,7 +329,7 @@
         "voice": "active"
       },
       {
-        "directional_assertions": {
+        "drive_change_relationships": {
           "entity_level": {
             "antecedent": {
               "text": "B. fragilis",
@@ -405,7 +405,7 @@
           "valence": "UP"
         },
         "subj": {
-          "ent_id": "n2",
+          "ent_id": "n8",
           "named_ents": [
             {
               "end": 11,
@@ -435,7 +435,7 @@
         "voice": "active"
       },
       {
-        "directional_assertions": {
+        "drive_change_relationships": {
           "entity_level": {
             "antecedent": {
               "text": "BFT",
@@ -462,7 +462,7 @@
         "is_directional": true,
         "named_ents_both_sides": true,
         "obj": {
-          "ent_id": "n11",
+          "ent_id": "n10",
           "named_ents": [
             {
               "end": 169,
@@ -567,7 +567,7 @@
           "valence": "UP"
         },
         "subj": {
-          "ent_id": "n1",
+          "ent_id": "n6",
           "named_ents": [
             {
               "end": 99,
@@ -597,7 +597,7 @@
         "voice": "active"
       },
       {
-        "directional_assertions": {
+        "drive_change_relationships": {
           "entity_level": {
             "antecedent": {
               "text": "BFT",
@@ -624,7 +624,7 @@
         "is_directional": true,
         "named_ents_both_sides": true,
         "obj": {
-          "ent_id": "n3",
+          "ent_id": "n4",
           "named_ents": [
             {
               "end": 298,
@@ -679,7 +679,7 @@
           "valence": "UP"
         },
         "subj": {
-          "ent_id": "n1",
+          "ent_id": "n6",
           "named_ents": [
             {
               "end": 258,
@@ -709,7 +709,7 @@
         "voice": "active"
       },
       {
-        "directional_assertions": {
+        "drive_change_relationships": {
           "entity_level": {
             "antecedent": {
               "text": "BFT",
@@ -736,7 +736,7 @@
         "is_directional": true,
         "named_ents_both_sides": true,
         "obj": {
-          "ent_id": "n6",
+          "ent_id": "n3",
           "named_ents": [
             {
               "end": 342,
@@ -785,7 +785,7 @@
           "valence": "UP"
         },
         "subj": {
-          "ent_id": "n1",
+          "ent_id": "n6",
           "named_ents": [
             {
               "end": 258,
@@ -815,7 +815,7 @@
         "voice": "active"
       },
       {
-        "directional_assertions": {
+        "drive_change_relationships": {
           "entity_level": {
             "antecedent": {
               "text": "polyamine catalyst spermine oxidase",
@@ -842,7 +842,7 @@
         "is_directional": true,
         "named_ents_both_sides": true,
         "obj": {
-          "ent_id": "n5",
+          "ent_id": "n2",
           "named_ents": [
             {
               "end": 362,
@@ -891,7 +891,7 @@
           "valence": "UP"
         },
         "subj": {
-          "ent_id": "n8",
+          "ent_id": "n1",
           "named_ents": [
             {
               "end": 342,
@@ -932,7 +932,7 @@
         "voice": "active"
       },
       {
-        "directional_assertions": {
+        "drive_change_relationships": {
           "entity_level": {
             "antecedent": {
               "text": "polyamine catalyst spermine oxidase",
@@ -959,7 +959,7 @@
         "is_directional": true,
         "named_ents_both_sides": true,
         "obj": {
-          "ent_id": "n9",
+          "ent_id": "n5",
           "named_ents": [
             {
               "end": 385,
@@ -1008,7 +1008,7 @@
           "valence": "UP"
         },
         "subj": {
-          "ent_id": "n8",
+          "ent_id": "n1",
           "named_ents": [
             {
               "end": 342,
@@ -1049,7 +1049,7 @@
         "voice": "active"
       },
       {
-        "directional_assertions": {
+        "drive_change_relationships": {
           "entity_level": {
             "antecedent": {
               "text": "polyamine catalyst spermine oxidase",
@@ -1125,7 +1125,7 @@
           "valence": "UP"
         },
         "subj": {
-          "ent_id": "n8",
+          "ent_id": "n1",
           "named_ents": [
             {
               "end": 342,
@@ -1166,7 +1166,7 @@
         "voice": "active"
       },
       {
-        "directional_assertions": {
+        "drive_change_relationships": {
           "entity_level": {
             "antecedent": {
               "text": "BFT",
@@ -1193,7 +1193,7 @@
         "is_directional": true,
         "named_ents_both_sides": true,
         "obj": {
-          "ent_id": "n4",
+          "ent_id": "n7",
           "named_ents": [
             {
               "end": 453,
@@ -1276,7 +1276,7 @@
           "valence": "UP"
         },
         "subj": {
-          "ent_id": "n1",
+          "ent_id": "n6",
           "named_ents": [
             {
               "end": 414,
@@ -1306,7 +1306,7 @@
         "voice": "active"
       },
       {
-        "directional_assertions": {
+        "drive_change_relationships": {
           "phrase_level": {
             "antecedent": {
               "text": "BFT",
@@ -1322,7 +1322,7 @@
         "is_directional": true,
         "named_ents_both_sides": false,
         "obj": {
-          "ent_id": "n10",
+          "ent_id": "n11",
           "named_ents": [],
           "spans": [
             [
@@ -1375,7 +1375,7 @@
           "valence": "UP"
         },
         "subj": {
-          "ent_id": "n1",
+          "ent_id": "n6",
           "named_ents": [
             {
               "end": 414,
@@ -1406,6 +1406,7 @@
       }
     ],
     "markdown_tables": {
+      "drive_change_relationships": "| Antecedent | Subsequent |\n|---|---|| &uarr; B. fragilis | &uarr; lytic |\n| &uarr; B. fragilis | &uarr; cell proliferation |\n| &uarr; BFT | &uarr; ions |\n| &uarr; BFT | &uarr; cIAP2 |\n| &uarr; BFT | &uarr; polyamine catalyst spermine oxidase |\n| &uarr; polyamine catalyst spermine oxidase | &uarr; ROS |\n| &uarr; polyamine catalyst spermine oxidase | &uarr; DNA damage |\n| &uarr; polyamine catalyst spermine oxidase | &uarr; cell proliferation |\n| &uarr; BFT | &uarr; colon |\n",
       "entity_phrase_relationships": "| Entity phrase left | Relation | Entity phrase right |\n|---|---|---|\n| B. fragilis toxin | does not exhibit | cell lytic activity |\n| B. fragilis toxin | rather promotes | cell proliferation |\n| BFT | increases | barrier permeability with active secretion of chloride ions |\n| BFT | induces | the antiapoptotic protein cIAP2 |\n| BFT | induces | the polyamine catalyst spermine oxidase |\n| the polyamine catalyst spermine oxidase which | triggers | ROS production |\n| the polyamine catalyst spermine oxidase which | triggers | DNA damage |\n| the polyamine catalyst spermine oxidase which | triggers | cell proliferation |\n| BFT | also induces | rapid DNA damage in colon epithelial cells |\n| BFT | also induces in | vivo |"
     },
     "named_entites": [

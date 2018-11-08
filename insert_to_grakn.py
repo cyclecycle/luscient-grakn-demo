@@ -48,9 +48,7 @@ with grakn.Graph(keyspace=KEYSPACE) as graph:
             response = graph.execute(query)
         #     pprint(response)
     for result in results:
-        for drive_change_relationships in result['drive_change_relationships']:
-            if not drive_change_relationships['level'] == 'ent':
-                continue
+        for drive_change_relationships in result['drive_change_relationships']['entity_level']:
             # First insert the drive_change event for each side of the dynamic association
             drive_change_ids = {}
             for component in {'antecedent', 'subsequent'}:
@@ -123,7 +121,7 @@ with grakn.Graph(keyspace=KEYSPACE) as graph:
                         antecedent: $antecedent,
                         subsequent: $subsequent
                     )
-                    isa dynamic_association;
+                    isa drive_change_relationship;
             '''.format(
                     ant_id=drive_change_ids['antecedent'],
                     sub_id=drive_change_ids['subsequent'],

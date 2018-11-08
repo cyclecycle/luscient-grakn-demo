@@ -28,7 +28,7 @@ def process(text):
             'named_entities': True,
             'detect_valence': True,
             'drive_change_relationships': True,
-            # 'resolve_acros': True,
+            'resolve_acros': True,
             # 'resolve_corefs': True,
             'markdown_tables': True
         },

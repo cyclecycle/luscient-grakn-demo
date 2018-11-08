@@ -1,64 +1,100 @@
 # Where antecedent ent is
 
-match $da (antecedent: $ant) isa dynamic_association; $ant (changed: $ent) isa drive_change; $ent isa named_entity has name "BFT"; offset 0; limit 30; get;
+match $da (antecedent: $ant) isa drive_change_relationship; $ant (changed: $ent) isa drive_change; $ent isa named_entity has name "BFT"; offset 0; limit 30; get;
 
 # Where subsequent ent is
 
-match $da (antecedent: $ant, subsequent: $sub) isa dynamic_association; $sub (changed: $ent2) isa drive_change; $ent2 isa named_entity has name "polyamine catalyst spermine oxidase"; offset 0; limit 30; get;
+match $da (antecedent: $ant, subsequent: $sub) isa drive_change_relationship; $sub (changed: $ent2) isa drive_change; $ent2 isa named_entity has name "polyamine catalyst spermine oxidase"; offset 0; limit 30; get;
 
-match $da (antecedent: $ant, subsequent: $sub) isa dynamic_association; $sub (changed: $ent2) isa drive_change; $ent2 isa named_entity has name "ROS"; offset 0; limit 30; get;
+match $da (antecedent: $ant, subsequent: $sub) isa drive_change_relationship; $sub (changed: $ent2) isa drive_change; $ent2 isa named_entity has name "ROS"; offset 0; limit 30; get;
 
 # dynamic association between specified two ents
 
-match $da (antecedent: $ant, subsequent: $sub) isa dynamic_association; $ant (changed: $ent) isa drive_change; $ent isa named_entity has name "BFT"; $sub (changed: $ent2) isa drive_change; $ent2 isa named_entity has name "polyamine catalyst spermine oxidase"; offset 0; limit 30; get;
+match $da (antecedent: $ant, subsequent: $sub) isa drive_change_relationship; $ant (changed: $ent) isa drive_change; $ent isa named_entity has name "BFT"; $sub (changed: $ent2) isa drive_change; $ent2 isa named_entity has name "polyamine catalyst spermine oxidase"; offset 0; limit 30; get;
 
-match $da (antecedent: $ant, subsequent: $sub) isa dynamic_association; $ant (changed: $ent) isa drive_change; $ent isa named_entity has name "BFT"; $sub (changed: $ent2) isa drive_change; $ent2 isa named_entity has name "ROS"; offset 0; limit 30; get;
+match $da (antecedent: $ant, subsequent: $sub) isa drive_change_relationship; $ant (changed: $ent) isa drive_change; $ent isa named_entity has name "BFT"; $sub (changed: $ent2) isa drive_change; $ent2 isa named_entity has name "ROS"; offset 0; limit 30; get;
 
+
+# drive change
+
+match
+    $dc (changed: $ent) isa drive_change has valence $valence;
+    $ent isa named_entity has name "BFT";
+    $valence "DOWN";
+get;
 
 # dynamic chain rule debug
 
 ## get a DA, and get the sub entity
 
-match $da (antecedent: $ant, subsequent: $sub) isa dynamic_association; $ant (changed: $ant_ent) isa drive_change; $ant_ent isa named_entity has name "BFT"; $sub (changed: $sub_ent) isa drive_change; $sub_ent isa named_entity; offset 0; limit 30; get;
+match $da (antecedent: $ant, subsequent: $sub) isa drive_change_relationship; $ant (changed: $ant_ent) isa drive_change; $ant_ent isa named_entity has name "BFT"; $sub (changed: $sub_ent) isa drive_change; $sub_ent isa named_entity; offset 0; limit 30; get;
 
 ## get a DA, and get the sub entity, get drive changes of this entity
 
-match $da (antecedent: $ant, subsequent: $sub) isa dynamic_association; $ant (changed: $ant_ent) isa drive_change; $ant_ent isa named_entity has name "BFT"; $sub (changed: $sub_ent) isa drive_change; $sub_ent isa named_entity; $sub_ent_drive_changes (changed: $sub_ent) isa drive_change; offset 0; limit 30; get $sub_ent_drive_changes;
+match $da (antecedent: $ant, subsequent: $sub) isa drive_change_relationship; $ant (changed: $ant_ent) isa drive_change; $ant_ent isa named_entity has name "BFT"; $sub (changed: $sub_ent) isa drive_change; $sub_ent isa named_entity; $sub_ent_drive_changes (changed: $sub_ent) isa drive_change; offset 0; limit 30; get $sub_ent_drive_changes;
 
 ## get a DA, and get the sub entity, get drive changes of this entity, get dynamic associations of these drive changes
 
-match $da (antecedent: $ant, subsequent: $sub) isa dynamic_association; $ant (changed: $ant_ent) isa drive_change; $ant_ent isa named_entity has name "BFT"; $sub (changed: $sub_ent) isa drive_change; $sub_ent isa named_entity; $sub_ent_drive_changes (changed: $sub_ent) isa drive_change; $cascade_da (antecedent: $sub_ent_drive_changes) isa dynamic_association; offset 0; limit 30; get $cascade_da;
+match $da (antecedent: $ant, subsequent: $sub) isa drive_change_relationship; $ant (changed: $ant_ent) isa drive_change; $ant_ent isa named_entity has name "BFT"; $sub (changed: $sub_ent) isa drive_change; $sub_ent isa named_entity; $sub_ent_drive_changes (changed: $sub_ent) isa drive_change; $cascade_da (antecedent: $sub_ent_drive_changes) isa drive_change_relationship; offset 0; limit 30; get $cascade_da;
 
 # Without fiddling around with valence it's simply:
 
-match $da (antecedent: $ant, subsequent: $sub) isa dynamic_association; $ant (changed: $ant_ent) isa drive_change; $ant_ent isa named_entity has name "BFT"; $cascade_da (antecedent: $sub, subsequent: $sub2) isa dynamic_association; offset 0; limit 30; get $sub2;
+match $da (antecedent: $ant, subsequent: $sub) isa drive_change_relationship; $ant (changed: $ant_ent) isa drive_change; $ant_ent isa named_entity has name "BFT"; $cascade_da (antecedent: $sub, subsequent: $sub2) isa drive_change_relationship; offset 0; limit 30; get $sub2;
 
 # without limiting to an antecedent named ent:
 
-match $da (antecedent: $ant, subsequent: $sub) isa dynamic_association; $cascade_da (antecedent: $sub, subsequent: $sub2) isa dynamic_association; offset 0; limit 30; get $sub2;
+match $da (antecedent: $ant, subsequent: $sub) isa drive_change_relationship; $cascade_da (antecedent: $sub, subsequent: $sub2) isa drive_change_relationship; offset 0; limit 30; get $sub2;
 
 # so create:
 
-insert (antecedent: $ant, subsequent: $sub2) isa dynamic_association;
+insert (antecedent: $ant, subsequent: $sub2) isa drive_change_relationship;
 
 #
 
-match $da (antecedent: $ant, subsequent: $sub) isa dynamic_association; $ant (changed: $ant_ent) isa drive_change; $ent isa named_entity has name "BFT"; $sub (changed: $sub_ent) isa drive_change; $sub_ent isa named_entity has name "ROS"; offset 0; limit 30; get;
+match $da (antecedent: $ant, subsequent: $sub) isa drive_change_relationship; $ant (changed: $ant_ent) isa drive_change; $ent isa named_entity has name "BFT"; $sub (changed: $sub_ent) isa drive_change; $sub_ent isa named_entity has name "ROS"; offset 0; limit 30; get;
 
 # subsequents of BFT
 
-match $da (antecedent: $ant, subsequent: $sub) isa dynamic_association; $ant (changed: $ant_ent) isa drive_change; $ent isa named_entity has name $ant_ent_name; $ant_ent_name "BFT"; $sub (changed: $sub_ent) isa drive_change; $sub_ent isa named_entity has name $sub_ent_name; offset 0; limit 30; get $ant_ent_name, $sub_ent_name;
+match $da (antecedent: $ant, subsequent: $sub) isa drive_change_relationship; $ant (changed: $ant_ent) isa drive_change; $ent isa named_entity has name $ant_ent_name; $ant_ent_name "BFT"; $sub (changed: $sub_ent) isa drive_change; $sub_ent isa named_entity has name $sub_ent_name; offset 0; limit 30; get $ant_ent_name, $sub_ent_name;
 
 # Subsequents of BFT increase
 
-match $da (antecedent: $ant, subsequent: $sub) isa dynamic_association; $ant (changed: $ant_ent) isa drive_change; $ent isa named_entity has name $ant_ent_name; $ant_ent_name "BFT"; $sub (changed: $sub_ent) isa drive_change; $sub_ent isa named_entity has name $sub_ent_name; offset 0; limit 30; get $ant_ent_name, $sub_ent_name;
+match 
+    $dcr (antecedent: $ant, subsequent: $sub) isa drive_change_relationship;
+    $ant (changed: $ant_ent) isa drive_change has valence $ant_valence;
+    $ent isa named_entity has name $ant_ent_name;
+    $ant_ent_name "BFT";
+    $ant_valence "UP";
+    $sub (changed: $sub_ent) isa drive_change has valence $sub_valence;
+    $sub_ent isa named_entity has name $sub_ent_name; 
+get
+    $ant_ent_name,
+    $ant_valence,
+    $sub_ent_name,
+    $sub_valence;
+
+# Subsequents of BFT decrease
+
+match 
+    $dcr (antecedent: $ant, subsequent: $sub) isa drive_change_relationship;
+    $ant (changed: $ant_ent) isa drive_change has valence $ant_valence;
+    $ent isa named_entity has name $ant_ent_name;
+    $ant_ent_name "BFT";
+    $ant_valence "DOWN";
+    $sub (changed: $sub_ent) isa drive_change has valence $sub_valence;
+    $sub_ent isa named_entity has name $sub_ent_name; 
+get
+    $ant_ent_name,
+    $ant_valence,
+    $sub_ent_name,
+    $sub_valence;
 
 # For a da, get the ant and sub valences, and create a new da with the same ents but the opposite valences.
 
 ## UP UP becomes DOWN DOWN
 
 when {
-    $da (antecedent: $ant, subsequent: $sub) isa dynamic_association;
+    $da (antecedent: $ant, subsequent: $sub) isa drive_change_relationship;
     $ant (named_entity: $ant_ent, valence: $ant_valence) isa drive_change;
     $sub (named_entity: $sub_ent, valence: $sub_valence) isa drive_change;
     $ant_valence "UP";
@@ -67,13 +103,24 @@ when {
 then {
     $ant (named_entity: $ant_ent, valence: "DOWN") isa drive_change;
     $sub (named_entity: $sub_ent, valence: "DOWN") isa drive_change;
-    $da_conv (antecedent: $ant, subsequent: $sub) isa dynamic_association;
+    $da_conv (antecedent: $ant, subsequent: $sub) isa drive_change_relationship;
 }
+
+### debug
+
+match
+    $dcr (antecedent: $ant, subsequent: $sub_) isa drive_change_relationship;
+    $ant (changed: $ant_ent) isa drive_change has valence "UP";
+    $sub_ (changed: $sub_ent) isa drive_change has valence "UP";
+    $ant_conv (changed: $ant_ent) isa drive_change has valence "DOWN";
+    $sub_conv (changed: $sub_ent) isa drive_change has valence "DOWN";
+    $ant_ent has name "BFT";
+get;
 
 ## UP DOWN becomes DOWN UP
 
 when {
-    $da (antecedent: $ant, subsequent: $sub) isa dynamic_association;
+    $da (antecedent: $ant, subsequent: $sub) isa drive_change_relationship;
     $ant (named_entity: $ant_ent, valence: $ant_valence) isa drive_change;
     $sub (named_entity: $sub_ent, valence: $sub_valence) isa drive_change;
     $ant_valence "UP";
@@ -82,13 +129,13 @@ when {
 then {
     $ant (named_entity: $ant_ent, valence: "DOWN") isa drive_change;
     $sub (named_entity: $sub_ent, valence: "UP") isa drive_change;
-    $da_conv (antecedent: $ant, subsequent: $sub) isa dynamic_association;
+    $da_conv (antecedent: $ant, subsequent: $sub) isa drive_change_relationship;
 }
 
 ## DOWN UP becomes UP DOWN
 
 when {
-    $da (antecedent: $ant, subsequent: $sub) isa dynamic_association;
+    $da (antecedent: $ant, subsequent: $sub) isa drive_change_relationship;
     $ant (named_entity: $ant_ent, valence: $ant_valence) isa drive_change;
     $sub (named_entity: $sub_ent, valence: $sub_valence) isa drive_change;
     $ant_valence "DOWN";
@@ -97,13 +144,13 @@ when {
 then {
     $ant (named_entity: $ant_ent, valence: "UP") isa drive_change;
     $sub (named_entity: $sub_ent, valence: "DOWN") isa drive_change;
-    $da_conv (antecedent: $ant, subsequent: $sub) isa dynamic_association;
+    $da_conv (antecedent: $ant, subsequent: $sub) isa drive_change_relationship;
 }
 
 ## DOWN DOWN becomes UP UP
 
 when {
-    $da (antecedent: $ant, subsequent: $sub) isa dynamic_association;
+    $da (antecedent: $ant, subsequent: $sub) isa drive_change_relationship;
     $ant (named_entity: $ant_ent, valence: $ant_valence) isa drive_change;
     $sub (named_entity: $sub_ent, valence: $sub_valence) isa drive_change;
     $ant_valence "DOWN";
@@ -112,9 +159,9 @@ when {
 then {
     $ant (named_entity: $ant_ent, valence: "UP") isa drive_change;
     $sub (named_entity: $sub_ent, valence: "UP") isa drive_change;
-    $da_conv (antecedent: $ant, subsequent: $sub) isa dynamic_association;
+    $da_conv (antecedent: $ant, subsequent: $sub) isa drive_change_relationship;
 }
 
 #
 
-match (antecedent: $ant_change, subsequent: $sub_change) isa dynamic_association; $sub_change (changed: $sub_ent) isa drive_change; $sub_ent isa named_entity has name "ROS"; $sub_drive_changes (changed: $sub_ent, valence: $valence) isa drive_change; $ant_change (changed: $ant_ent) isa drive_change; $ant_ent isa named_entity has name "BFT"; get;
+match (antecedent: $ant_change, subsequent: $sub_change) isa drive_change_relationship; $sub_change (changed: $sub_ent) isa drive_change; $sub_ent isa named_entity has name "ROS"; $sub_drive_changes (changed: $sub_ent, valence: $valence) isa drive_change; $ant_change (changed: $ant_ent) isa drive_change; $ant_ent isa named_entity has name "BFT"; get;

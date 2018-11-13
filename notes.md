@@ -20,7 +20,7 @@ Though the initial purpose of the study was to verify if BFT-2 was able to furth
 In addition, BFT can clear E-cadherin and, as a consequence, disturb epithelial homeostasis, thus leading to colonic epithelial proliferation and possibly resulting in the onset of colorectal cancer
 
 4239093
-The toxin is a metalloprotease named BFT (B. fragilis toxin or FRA) that drives pathways known to be linked to inflammation and colorectal cancers.
+The toxin is a metalloprotease named BFT that drives pathways known to be linked to colorectal cancer.
 
 6216254
 BFT induced acute and chronic colitis in C57BL/six mice, and colon tumours in the multiple intestinal neoplasia (Apc Min/+) mouse model for human colon carcinoma
@@ -51,3 +51,39 @@ Moreover, recent data clearly show that SMOX induction is associated with the de
 Induction of the polyamine catabolic enzyme, spermine oxidase (SMO) has been linked to increased reactive oxygen species (ROS) and DNA damage in human gastric and lung epithelial cells and suggest direct mechanistic links between inflammation, SMO activity, ROS production, and epithelial carcinogenesis that are likely relevant in prostate cancer.
 
 Spermine oxidase is upregulated and promotes tumor growth in hepatocellular carcinoma. PMID: 29923661
+
+
+
+COMPLETE EXAMPLE
+
+BFT TO SMO
+
+PMC3174648
+We now demonstrate that purified B. fragilis toxin up-regulates spermine oxidase in HT29/c1 colonic epithelial cells.
+
+SMO EFFECTS
+
+PMC3065872
+Induction of the polyamine catabolic enzyme, spermine oxidase has been linked to increased reactive oxygen species and DNA damage in human gastric and lung epithelial cells.
+
+PMC6131205
+There is direct evidence that the induction of spermine oxidase during neoplastic transformation leads to the development of cancer.
+
+Altogether:
+
+We now demonstrate that purified B. fragilis toxin up-regulates spermine oxidase in HT29/c1 colonic epithelial cells.
+
+Induction of the polyamine catabolic enzyme, spermine oxidase has been linked to increased reactive oxygen species and DNA damage in human gastric and lung epithelial cells.
+
+There is direct evidence that the induction of spermine oxidase during neoplastic transformation leads to the development of cancer.
+
+
+BFT TO CANCER
+
+lab finding :)
+
+
+CONTRADICTORY INFORMATION
+
+PMC5292333
+The authors found that BFT could actually inhibit tumor formation.

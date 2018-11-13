@@ -5,47 +5,33 @@ from pprint import pprint
 
 CWD = os.path.abspath(os.path.dirname(__file__))
 DATA_DIR = os.path.join(CWD, 'data')
+INFILE = os.path.join(DATA_DIR, 'input.json')
+OUTFILE = os.path.join(DATA_DIR, 'output.json')
+API_URL = 'http://www.luscient.io/api'
 
-API_URL = 'http://localhost:5000/api'
-
-'''TODO
-
-implement acronym and coref resolution on API side
-    run relex on coref resolved, but 
-named ent annotation with becas
-API handling whole docs
-    gives sent idx, chunk idx, token idx of components
-
-'''
 
 def process(text):
-    text = str(text)
     print(text)
-    r = requests.post(
-        API_URL, 
-        json={
-            'text': text,
-            'named_entities': True,
-            'detect_valence': True,
-            'drive_change_relationships': True,
-            'resolve_acros': True,
-            # 'resolve_corefs': True,
-            'markdown_tables': True
-        },
-    )
-    result = r.json()
-    # Check for error
-    return result
+    r = requests.post(API_URL, json={'text': text})
+    if not r.status_code == 400:
+        result = r.json()
+        return result
+    print('Something went wrong. API returned:\n\n{}'.format(r.text))
+    return None
 
 
 results = []
-for fp in os.scandir(os.path.join(DATA_DIR, 'colorectal_cancer')):
-    with open(fp, 'r', encoding='utf-8') as f:
-        content = f.read()
-        result = process(content)
-        results.append(result)
+with open(INFILE, 'rb') as f:
+    input_ = json.load(f)
+    for item in input_:
+        response = process(item['text'])
+        if response:
+            response['reference'] = {
+                'source': 'PMC',
+                'id': item['pmcid']
+            }
+            results.append(response)
 
 
-print(results)
-with open(os.path.join(DATA_DIR, 'processed/inf.json'), 'w') as f:
+with open(OUTFILE, 'w') as f:
     json.dump(results, f, ensure_ascii=False, indent=2)

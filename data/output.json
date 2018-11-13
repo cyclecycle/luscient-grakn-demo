@@ -1,0 +1,1933 @@
+[
+  {
+    "entity_phrase_relationships": [
+      {
+        "is_directional": true,
+        "obj": {
+          "ent_id": "n0",
+          "named_ents": [
+            {
+              "end": 80,
+              "precedence": 1,
+              "refs": [
+                {
+                  "class": "PRGE",
+                  "id": "Q99835",
+                  "source": "UNIPROT",
+                  "sub_id": "T116"
+                },
+                {
+                  "class": "ENZY",
+                  "id": "1.5.3.16",
+                  "source": "EC",
+                  "sub_id": "T126"
+                }
+              ],
+              "start": 64,
+              "term": "spermine oxidase"
+            },
+            {
+              "end": 72,
+              "precedence": 2,
+              "refs": [
+                {
+                  "class": "CHED",
+                  "id": "15746",
+                  "source": "CHEBI",
+                  "sub_id": "T103"
+                }
+              ],
+              "start": 64,
+              "term": "spermine"
+            },
+            {
+              "end": 99,
+              "precedence": 3,
+              "refs": [
+                {
+                  "class": "ANAT",
+                  "id": "C0009368",
+                  "source": "UMLS",
+                  "sub_id": "T023"
+                }
+              ],
+              "start": 92,
+              "term": "colonic"
+            },
+            {
+              "end": 116,
+              "precedence": 4,
+              "refs": [
+                {
+                  "class": "ANAT",
+                  "id": "C0014597",
+                  "source": "UMLS",
+                  "sub_id": "T025"
+                }
+              ],
+              "start": 100,
+              "term": "epithelial cells"
+            },
+            {
+              "end": 116,
+              "precedence": 5,
+              "refs": [
+                {
+                  "class": "COMP",
+                  "id": "0005623",
+                  "source": "GO",
+                  "sub_id": ""
+                }
+              ],
+              "start": 111,
+              "term": "cells"
+            }
+          ],
+          "spans": [
+            [
+              64,
+              80
+            ],
+            [
+              81,
+              83
+            ],
+            [
+              84,
+              116
+            ]
+          ],
+          "text": "spermine oxidase in HT29/c1 colonic epithelial cells",
+          "tokens": [
+            {
+              "span": [
+                64,
+                80
+              ],
+              "text": "spermine oxidase"
+            },
+            {
+              "span": [
+                81,
+                83
+              ],
+              "text": "in"
+            },
+            {
+              "span": [
+                84,
+                116
+              ],
+              "text": "HT29/c1 colonic epithelial cells"
+            }
+          ],
+          "valence": {
+            "net": null,
+            "terms": []
+          }
+        },
+        "pred": {
+          "direction": "forward",
+          "named_ents": [],
+          "spans": [
+            [
+              51,
+              63
+            ]
+          ],
+          "text": "up-regulates",
+          "tokens": [
+            {
+              "span": [
+                51,
+                63
+              ],
+              "text": "up-regulates"
+            }
+          ],
+          "valence": {
+            "net": "UP",
+            "terms": [
+              {
+                "end": 63,
+                "start": 51,
+                "term": "up-regulates",
+                "valence": "UP"
+              }
+            ]
+          }
+        },
+        "subj": {
+          "ent_id": "n1",
+          "named_ents": [
+            {
+              "end": 44,
+              "precedence": 1,
+              "refs": [
+                {
+                  "class": "SPEC",
+                  "id": "817",
+                  "source": "NCBI",
+                  "sub_id": "T001"
+                },
+                {
+                  "class": "SPEC",
+                  "id": "576622",
+                  "source": "NCBI",
+                  "sub_id": "T001"
+                },
+                {
+                  "class": "SPEC",
+                  "id": "80304",
+                  "source": "NCBI",
+                  "sub_id": "T001"
+                },
+                {
+                  "class": "SPEC",
+                  "id": "271689",
+                  "source": "NCBI",
+                  "sub_id": "T001"
+                }
+              ],
+              "start": 33,
+              "term": "B. fragilis"
+            }
+          ],
+          "spans": [
+            [
+              24,
+              50
+            ]
+          ],
+          "text": "purified B. fragilis toxin",
+          "tokens": [
+            {
+              "span": [
+                24,
+                50
+              ],
+              "text": "purified B. fragilis toxin"
+            }
+          ],
+          "valence": {
+            "net": null,
+            "terms": []
+          }
+        },
+        "voice": "active"
+      }
+    ],
+    "functional_relationships": {
+      "entity_level": [
+        {
+          "antecedent": {
+            "text": "B. fragilis",
+            "valence": "UP"
+          },
+          "consequent": {
+            "text": "spermine oxidase",
+            "valence": "UP"
+          },
+          "level": "entity"
+        }
+      ],
+      "phrase_level": [
+        {
+          "antecedent": {
+            "text": "purified B. fragilis toxin",
+            "valence": "UP"
+          },
+          "consequent": {
+            "text": "spermine oxidase in HT29/c1 colonic epithelial cells",
+            "valence": "UP"
+          },
+          "level": "phrase"
+        }
+      ]
+    },
+    "markdown_tables": {
+      "entity_level_func_rels": {
+        "markdown": "| Antecedent | Consequent |\n|---|---|\n| &uarr; B. fragilis | &uarr; spermine oxidase |\n",
+        "title": "Functional Relationships (entity level)"
+      },
+      "entity_phrase_relationships": {
+        "markdown": "| Entity phrase left | Relation | Entity phrase right | Voice |\n|---|---|---|---|\n| purified B. fragilis toxin | up-regulates | spermine oxidase in HT29/c1 colonic epithelial cells | active |",
+        "title": "Entity Phrase Relationships"
+      },
+      "phrase_level_func_rels": {
+        "markdown": "| Antecedent | Consequent |\n|---|---|\n| &uarr; purified B. fragilis toxin | &uarr; spermine oxidase in HT29/c1 colonic epithelial cells |\n",
+        "title": "Functional Relationships (phrase level)"
+      }
+    },
+    "named_ents": [
+      {
+        "end": 44,
+        "precedence": 1,
+        "refs": [
+          {
+            "class": "SPEC",
+            "id": "817",
+            "source": "NCBI",
+            "sub_id": "T001"
+          },
+          {
+            "class": "SPEC",
+            "id": "576622",
+            "source": "NCBI",
+            "sub_id": "T001"
+          },
+          {
+            "class": "SPEC",
+            "id": "80304",
+            "source": "NCBI",
+            "sub_id": "T001"
+          },
+          {
+            "class": "SPEC",
+            "id": "271689",
+            "source": "NCBI",
+            "sub_id": "T001"
+          }
+        ],
+        "start": 33,
+        "term": "B. fragilis"
+      },
+      {
+        "end": 80,
+        "precedence": 1,
+        "refs": [
+          {
+            "class": "PRGE",
+            "id": "Q99835",
+            "source": "UNIPROT",
+            "sub_id": "T116"
+          },
+          {
+            "class": "ENZY",
+            "id": "1.5.3.16",
+            "source": "EC",
+            "sub_id": "T126"
+          }
+        ],
+        "start": 64,
+        "term": "spermine oxidase"
+      },
+      {
+        "end": 72,
+        "precedence": 2,
+        "refs": [
+          {
+            "class": "CHED",
+            "id": "15746",
+            "source": "CHEBI",
+            "sub_id": "T103"
+          }
+        ],
+        "start": 64,
+        "term": "spermine"
+      },
+      {
+        "end": 99,
+        "precedence": 3,
+        "refs": [
+          {
+            "class": "ANAT",
+            "id": "C0009368",
+            "source": "UMLS",
+            "sub_id": "T023"
+          }
+        ],
+        "start": 92,
+        "term": "colonic"
+      },
+      {
+        "end": 116,
+        "precedence": 4,
+        "refs": [
+          {
+            "class": "ANAT",
+            "id": "C0014597",
+            "source": "UMLS",
+            "sub_id": "T025"
+          }
+        ],
+        "start": 100,
+        "term": "epithelial cells"
+      },
+      {
+        "end": 116,
+        "precedence": 5,
+        "refs": [
+          {
+            "class": "COMP",
+            "id": "0005623",
+            "source": "GO",
+            "sub_id": ""
+          }
+        ],
+        "start": 111,
+        "term": "cells"
+      }
+    ],
+    "original_text": "We now demonstrate that purified B. fragilis toxin up-regulates spermine oxidase in HT29/c1 colonic epithelial cells.",
+    "preprocessed_text": "We now demonstrate that purified B. fragilis toxin up-regulates spermine oxidase in HT29/c1 colonic epithelial cells.",
+    "reference": {
+      "source": "PMC",
+      "id": "PMC3174648"
+    }
+  },
+  {
+    "entity_phrase_relationships": [
+      {
+        "is_directional": true,
+        "obj": {
+          "ent_id": "n1",
+          "named_ents": [
+            {
+              "end": 114,
+              "precedence": 1,
+              "refs": [
+                {
+                  "class": "CHED",
+                  "id": "26523",
+                  "source": "CHEBI",
+                  "sub_id": "T103"
+                }
+              ],
+              "start": 91,
+              "term": "reactive oxygen species"
+            }
+          ],
+          "spans": [
+            [
+              81,
+              114
+            ],
+            [
+              130,
+              132
+            ],
+            [
+              156,
+              172
+            ]
+          ],
+          "text": "increased reactive oxygen species in epithelial cells",
+          "tokens": [
+            {
+              "span": [
+                81,
+                114
+              ],
+              "text": "increased reactive oxygen species"
+            },
+            {
+              "span": [
+                130,
+                132
+              ],
+              "text": "in"
+            },
+            {
+              "span": [
+                156,
+                172
+              ],
+              "text": "epithelial cells"
+            }
+          ],
+          "valence": {
+            "net": "UP",
+            "terms": [
+              {
+                "end": 90,
+                "start": 81,
+                "term": "increased",
+                "valence": "UP"
+              }
+            ]
+          }
+        },
+        "pred": {
+          "direction": "forward",
+          "named_ents": [],
+          "spans": [
+            [
+              62,
+              77
+            ],
+            [
+              78,
+              80
+            ]
+          ],
+          "text": "has been linked to",
+          "tokens": [
+            {
+              "span": [
+                62,
+                77
+              ],
+              "text": "has been linked"
+            },
+            {
+              "span": [
+                78,
+                80
+              ],
+              "text": "to"
+            }
+          ],
+          "valence": {
+            "net": "UP",
+            "terms": [
+              {
+                "end": 77,
+                "start": 71,
+                "term": "linked",
+                "valence": "UP"
+              }
+            ]
+          }
+        },
+        "subj": {
+          "ent_id": "n2",
+          "named_ents": [
+            {
+              "end": 26,
+              "precedence": 1,
+              "refs": [
+                {
+                  "class": "CHED",
+                  "id": "60143",
+                  "source": "CHEBI",
+                  "sub_id": "T103"
+                },
+                {
+                  "class": "CHED",
+                  "id": "51349",
+                  "source": "CHEBI",
+                  "sub_id": "T103"
+                }
+              ],
+              "start": 17,
+              "term": "polyamine"
+            },
+            {
+              "end": 36,
+              "precedence": 2,
+              "refs": [
+                {
+                  "class": "PROC",
+                  "id": "C1516314",
+                  "source": "UMLS",
+                  "sub_id": "T039"
+                }
+              ],
+              "start": 27,
+              "term": "catabolic"
+            }
+          ],
+          "spans": [
+            [
+              0,
+              9
+            ],
+            [
+              10,
+              12
+            ],
+            [
+              13,
+              43
+            ]
+          ],
+          "text": "Induction of the polyamine catabolic enzyme",
+          "tokens": [
+            {
+              "span": [
+                0,
+                9
+              ],
+              "text": "Induction"
+            },
+            {
+              "span": [
+                10,
+                12
+              ],
+              "text": "of"
+            },
+            {
+              "span": [
+                13,
+                43
+              ],
+              "text": "the polyamine catabolic enzyme"
+            }
+          ],
+          "valence": {
+            "net": null,
+            "terms": []
+          }
+        },
+        "voice": "active"
+      },
+      {
+        "is_directional": true,
+        "obj": {
+          "ent_id": "n0",
+          "named_ents": [
+            {
+              "end": 129,
+              "precedence": 1,
+              "refs": [
+                {
+                  "class": "DISO",
+                  "id": "C0012860",
+                  "source": "UMLS",
+                  "sub_id": "T049"
+                }
+              ],
+              "start": 119,
+              "term": "DNA damage"
+            }
+          ],
+          "spans": [
+            [
+              119,
+              129
+            ]
+          ],
+          "text": "DNA damage",
+          "tokens": [
+            {
+              "span": [
+                119,
+                129
+              ],
+              "text": "DNA damage"
+            }
+          ],
+          "valence": {
+            "net": null,
+            "terms": []
+          }
+        },
+        "pred": {
+          "direction": "forward",
+          "named_ents": [],
+          "spans": [
+            [
+              62,
+              77
+            ],
+            [
+              78,
+              80
+            ]
+          ],
+          "text": "has been linked to",
+          "tokens": [
+            {
+              "span": [
+                62,
+                77
+              ],
+              "text": "has been linked"
+            },
+            {
+              "span": [
+                78,
+                80
+              ],
+              "text": "to"
+            }
+          ],
+          "valence": {
+            "net": "UP",
+            "terms": [
+              {
+                "end": 77,
+                "start": 71,
+                "term": "linked",
+                "valence": "UP"
+              }
+            ]
+          }
+        },
+        "subj": {
+          "ent_id": "n2",
+          "named_ents": [
+            {
+              "end": 26,
+              "precedence": 1,
+              "refs": [
+                {
+                  "class": "CHED",
+                  "id": "60143",
+                  "source": "CHEBI",
+                  "sub_id": "T103"
+                },
+                {
+                  "class": "CHED",
+                  "id": "51349",
+                  "source": "CHEBI",
+                  "sub_id": "T103"
+                }
+              ],
+              "start": 17,
+              "term": "polyamine"
+            },
+            {
+              "end": 36,
+              "precedence": 2,
+              "refs": [
+                {
+                  "class": "PROC",
+                  "id": "C1516314",
+                  "source": "UMLS",
+                  "sub_id": "T039"
+                }
+              ],
+              "start": 27,
+              "term": "catabolic"
+            }
+          ],
+          "spans": [
+            [
+              0,
+              9
+            ],
+            [
+              10,
+              12
+            ],
+            [
+              13,
+              43
+            ]
+          ],
+          "text": "Induction of the polyamine catabolic enzyme",
+          "tokens": [
+            {
+              "span": [
+                0,
+                9
+              ],
+              "text": "Induction"
+            },
+            {
+              "span": [
+                10,
+                12
+              ],
+              "text": "of"
+            },
+            {
+              "span": [
+                13,
+                43
+              ],
+              "text": "the polyamine catabolic enzyme"
+            }
+          ],
+          "valence": {
+            "net": null,
+            "terms": []
+          }
+        },
+        "voice": "active"
+      },
+      {
+        "is_directional": true,
+        "obj": {
+          "ent_id": "n1",
+          "named_ents": [
+            {
+              "end": 114,
+              "precedence": 1,
+              "refs": [
+                {
+                  "class": "CHED",
+                  "id": "26523",
+                  "source": "CHEBI",
+                  "sub_id": "T103"
+                }
+              ],
+              "start": 91,
+              "term": "reactive oxygen species"
+            }
+          ],
+          "spans": [
+            [
+              81,
+              114
+            ],
+            [
+              130,
+              132
+            ],
+            [
+              156,
+              172
+            ]
+          ],
+          "text": "increased reactive oxygen species in epithelial cells",
+          "tokens": [
+            {
+              "span": [
+                81,
+                114
+              ],
+              "text": "increased reactive oxygen species"
+            },
+            {
+              "span": [
+                130,
+                132
+              ],
+              "text": "in"
+            },
+            {
+              "span": [
+                156,
+                172
+              ],
+              "text": "epithelial cells"
+            }
+          ],
+          "valence": {
+            "net": "UP",
+            "terms": [
+              {
+                "end": 90,
+                "start": 81,
+                "term": "increased",
+                "valence": "UP"
+              }
+            ]
+          }
+        },
+        "pred": {
+          "direction": "forward",
+          "named_ents": [],
+          "spans": [
+            [
+              62,
+              77
+            ],
+            [
+              78,
+              80
+            ]
+          ],
+          "text": "has been linked to",
+          "tokens": [
+            {
+              "span": [
+                62,
+                77
+              ],
+              "text": "has been linked"
+            },
+            {
+              "span": [
+                78,
+                80
+              ],
+              "text": "to"
+            }
+          ],
+          "valence": {
+            "net": "UP",
+            "terms": [
+              {
+                "end": 77,
+                "start": 71,
+                "term": "linked",
+                "valence": "UP"
+              }
+            ]
+          }
+        },
+        "subj": {
+          "ent_id": "n3",
+          "named_ents": [
+            {
+              "end": 61,
+              "precedence": 1,
+              "refs": [
+                {
+                  "class": "PRGE",
+                  "id": "Q99835",
+                  "source": "UNIPROT",
+                  "sub_id": "T116"
+                },
+                {
+                  "class": "ENZY",
+                  "id": "1.5.3.16",
+                  "source": "EC",
+                  "sub_id": "T126"
+                }
+              ],
+              "start": 45,
+              "term": "spermine oxidase"
+            },
+            {
+              "end": 53,
+              "precedence": 2,
+              "refs": [
+                {
+                  "class": "CHED",
+                  "id": "15746",
+                  "source": "CHEBI",
+                  "sub_id": "T103"
+                }
+              ],
+              "start": 45,
+              "term": "spermine"
+            }
+          ],
+          "spans": [
+            [
+              45,
+              61
+            ]
+          ],
+          "text": "spermine oxidase",
+          "tokens": [
+            {
+              "span": [
+                45,
+                61
+              ],
+              "text": "spermine oxidase"
+            }
+          ],
+          "valence": {
+            "net": null,
+            "terms": []
+          }
+        },
+        "voice": "active"
+      },
+      {
+        "is_directional": true,
+        "obj": {
+          "ent_id": "n0",
+          "named_ents": [
+            {
+              "end": 129,
+              "precedence": 1,
+              "refs": [
+                {
+                  "class": "DISO",
+                  "id": "C0012860",
+                  "source": "UMLS",
+                  "sub_id": "T049"
+                }
+              ],
+              "start": 119,
+              "term": "DNA damage"
+            }
+          ],
+          "spans": [
+            [
+              119,
+              129
+            ]
+          ],
+          "text": "DNA damage",
+          "tokens": [
+            {
+              "span": [
+                119,
+                129
+              ],
+              "text": "DNA damage"
+            }
+          ],
+          "valence": {
+            "net": null,
+            "terms": []
+          }
+        },
+        "pred": {
+          "direction": "forward",
+          "named_ents": [],
+          "spans": [
+            [
+              62,
+              77
+            ],
+            [
+              78,
+              80
+            ]
+          ],
+          "text": "has been linked to",
+          "tokens": [
+            {
+              "span": [
+                62,
+                77
+              ],
+              "text": "has been linked"
+            },
+            {
+              "span": [
+                78,
+                80
+              ],
+              "text": "to"
+            }
+          ],
+          "valence": {
+            "net": "UP",
+            "terms": [
+              {
+                "end": 77,
+                "start": 71,
+                "term": "linked",
+                "valence": "UP"
+              }
+            ]
+          }
+        },
+        "subj": {
+          "ent_id": "n3",
+          "named_ents": [
+            {
+              "end": 61,
+              "precedence": 1,
+              "refs": [
+                {
+                  "class": "PRGE",
+                  "id": "Q99835",
+                  "source": "UNIPROT",
+                  "sub_id": "T116"
+                },
+                {
+                  "class": "ENZY",
+                  "id": "1.5.3.16",
+                  "source": "EC",
+                  "sub_id": "T126"
+                }
+              ],
+              "start": 45,
+              "term": "spermine oxidase"
+            },
+            {
+              "end": 53,
+              "precedence": 2,
+              "refs": [
+                {
+                  "class": "CHED",
+                  "id": "15746",
+                  "source": "CHEBI",
+                  "sub_id": "T103"
+                }
+              ],
+              "start": 45,
+              "term": "spermine"
+            }
+          ],
+          "spans": [
+            [
+              45,
+              61
+            ]
+          ],
+          "text": "spermine oxidase",
+          "tokens": [
+            {
+              "span": [
+                45,
+                61
+              ],
+              "text": "spermine oxidase"
+            }
+          ],
+          "valence": {
+            "net": null,
+            "terms": []
+          }
+        },
+        "voice": "active"
+      }
+    ],
+    "functional_relationships": {
+      "entity_level": [
+        {
+          "antecedent": {
+            "text": "polyamine",
+            "valence": "UP"
+          },
+          "consequent": {
+            "text": "reactive oxygen species",
+            "valence": "UP"
+          },
+          "level": "entity"
+        },
+        {
+          "antecedent": {
+            "text": "polyamine",
+            "valence": "UP"
+          },
+          "consequent": {
+            "text": "DNA damage",
+            "valence": "UP"
+          },
+          "level": "entity"
+        },
+        {
+          "antecedent": {
+            "text": "spermine oxidase",
+            "valence": "UP"
+          },
+          "consequent": {
+            "text": "reactive oxygen species",
+            "valence": "UP"
+          },
+          "level": "entity"
+        },
+        {
+          "antecedent": {
+            "text": "spermine oxidase",
+            "valence": "UP"
+          },
+          "consequent": {
+            "text": "DNA damage",
+            "valence": "UP"
+          },
+          "level": "entity"
+        }
+      ],
+      "phrase_level": [
+        {
+          "antecedent": {
+            "text": "Induction of the polyamine catabolic enzyme",
+            "valence": "UP"
+          },
+          "consequent": {
+            "text": "increased reactive oxygen species in epithelial cells",
+            "valence": "UP"
+          },
+          "level": "phrase"
+        },
+        {
+          "antecedent": {
+            "text": "Induction of the polyamine catabolic enzyme",
+            "valence": "UP"
+          },
+          "consequent": {
+            "text": "DNA damage",
+            "valence": "UP"
+          },
+          "level": "phrase"
+        },
+        {
+          "antecedent": {
+            "text": "spermine oxidase",
+            "valence": "UP"
+          },
+          "consequent": {
+            "text": "increased reactive oxygen species in epithelial cells",
+            "valence": "UP"
+          },
+          "level": "phrase"
+        },
+        {
+          "antecedent": {
+            "text": "spermine oxidase",
+            "valence": "UP"
+          },
+          "consequent": {
+            "text": "DNA damage",
+            "valence": "UP"
+          },
+          "level": "phrase"
+        }
+      ]
+    },
+    "markdown_tables": {
+      "entity_level_func_rels": {
+        "markdown": "| Antecedent | Consequent |\n|---|---|\n| &uarr; polyamine | &uarr; reactive oxygen species |\n| &uarr; polyamine | &uarr; DNA damage |\n| &uarr; spermine oxidase | &uarr; reactive oxygen species |\n| &uarr; spermine oxidase | &uarr; DNA damage |\n",
+        "title": "Functional Relationships (entity level)"
+      },
+      "entity_phrase_relationships": {
+        "markdown": "| Entity phrase left | Relation | Entity phrase right | Voice |\n|---|---|---|---|\n| Induction of the polyamine catabolic enzyme | has been linked to | increased reactive oxygen species in epithelial cells | active |\n| Induction of the polyamine catabolic enzyme | has been linked to | DNA damage | active |\n| spermine oxidase | has been linked to | increased reactive oxygen species in epithelial cells | active |\n| spermine oxidase | has been linked to | DNA damage | active |",
+        "title": "Entity Phrase Relationships"
+      },
+      "phrase_level_func_rels": {
+        "markdown": "| Antecedent | Consequent |\n|---|---|\n| &uarr; Induction of the polyamine catabolic enzyme | &uarr; increased reactive oxygen species in epithelial cells |\n| &uarr; Induction of the polyamine catabolic enzyme | &uarr; DNA damage |\n| &uarr; spermine oxidase | &uarr; increased reactive oxygen species in epithelial cells |\n| &uarr; spermine oxidase | &uarr; DNA damage |\n",
+        "title": "Functional Relationships (phrase level)"
+      }
+    },
+    "named_ents": [
+      {
+        "end": 26,
+        "precedence": 1,
+        "refs": [
+          {
+            "class": "CHED",
+            "id": "60143",
+            "source": "CHEBI",
+            "sub_id": "T103"
+          },
+          {
+            "class": "CHED",
+            "id": "51349",
+            "source": "CHEBI",
+            "sub_id": "T103"
+          }
+        ],
+        "start": 17,
+        "term": "polyamine"
+      },
+      {
+        "end": 36,
+        "precedence": 2,
+        "refs": [
+          {
+            "class": "PROC",
+            "id": "C1516314",
+            "source": "UMLS",
+            "sub_id": "T039"
+          }
+        ],
+        "start": 27,
+        "term": "catabolic"
+      },
+      {
+        "end": 61,
+        "precedence": 1,
+        "refs": [
+          {
+            "class": "PRGE",
+            "id": "Q99835",
+            "source": "UNIPROT",
+            "sub_id": "T116"
+          },
+          {
+            "class": "ENZY",
+            "id": "1.5.3.16",
+            "source": "EC",
+            "sub_id": "T126"
+          }
+        ],
+        "start": 45,
+        "term": "spermine oxidase"
+      },
+      {
+        "end": 53,
+        "precedence": 2,
+        "refs": [
+          {
+            "class": "CHED",
+            "id": "15746",
+            "source": "CHEBI",
+            "sub_id": "T103"
+          }
+        ],
+        "start": 45,
+        "term": "spermine"
+      },
+      {
+        "end": 114,
+        "precedence": 1,
+        "refs": [
+          {
+            "class": "CHED",
+            "id": "26523",
+            "source": "CHEBI",
+            "sub_id": "T103"
+          }
+        ],
+        "start": 91,
+        "term": "reactive oxygen species"
+      },
+      {
+        "end": 129,
+        "precedence": 1,
+        "refs": [
+          {
+            "class": "DISO",
+            "id": "C0012860",
+            "source": "UMLS",
+            "sub_id": "T049"
+          }
+        ],
+        "start": 119,
+        "term": "DNA damage"
+      },
+      {
+        "end": 138,
+        "refs": [
+          {
+            "class": "SPEC",
+            "id": "9606",
+            "source": "NCBI",
+            "sub_id": "T001"
+          }
+        ],
+        "start": 133,
+        "term": "human"
+      },
+      {
+        "end": 146,
+        "refs": [
+          {
+            "class": "ANAT",
+            "id": "C0038351",
+            "source": "UMLS",
+            "sub_id": "T023"
+          }
+        ],
+        "start": 139,
+        "term": "gastric"
+      },
+      {
+        "end": 155,
+        "refs": [
+          {
+            "class": "ANAT",
+            "id": "C0024109",
+            "source": "UMLS",
+            "sub_id": "T023"
+          },
+          {
+            "class": "ANAT",
+            "id": "C1278908",
+            "source": "UMLS",
+            "sub_id": "T023"
+          }
+        ],
+        "start": 151,
+        "term": "lung"
+      },
+      {
+        "end": 172,
+        "refs": [
+          {
+            "class": "ANAT",
+            "id": "C0014597",
+            "source": "UMLS",
+            "sub_id": "T025"
+          }
+        ],
+        "start": 156,
+        "term": "epithelial cells"
+      },
+      {
+        "end": 172,
+        "refs": [
+          {
+            "class": "COMP",
+            "id": "0005623",
+            "source": "GO",
+            "sub_id": ""
+          }
+        ],
+        "start": 167,
+        "term": "cells"
+      }
+    ],
+    "original_text": "Induction of the polyamine catabolic enzyme, spermine oxidase has been linked to increased reactive oxygen species and DNA damage in human gastric and lung epithelial cells.",
+    "preprocessed_text": "Induction of the polyamine catabolic enzyme, spermine oxidase has been linked to increased reactive oxygen species and DNA damage in human gastric and lung epithelial cells.",
+    "reference": {
+      "source": "PMC",
+      "id": "PMC3065872"
+    }
+  },
+  {
+    "entity_phrase_relationships": [
+      {
+        "is_directional": true,
+        "obj": {
+          "ent_id": "n0",
+          "named_ents": [
+            {
+              "end": 131,
+              "precedence": 1,
+              "refs": [
+                {
+                  "class": "DISO",
+                  "id": "C0006826",
+                  "source": "UMLS",
+                  "sub_id": "T191"
+                }
+              ],
+              "start": 125,
+              "term": "cancer"
+            },
+            {
+              "end": 121,
+              "precedence": 2,
+              "refs": [
+                {
+                  "class": "PROC",
+                  "id": "C0678723",
+                  "source": "UMLS",
+                  "sub_id": "T040"
+                },
+                {
+                  "class": "PROC",
+                  "id": "0032502",
+                  "source": "GO",
+                  "sub_id": ""
+                }
+              ],
+              "start": 110,
+              "term": "development"
+            }
+          ],
+          "spans": [
+            [
+              106,
+              121
+            ],
+            [
+              122,
+              124
+            ],
+            [
+              125,
+              131
+            ]
+          ],
+          "text": "the development of cancer",
+          "tokens": [
+            {
+              "span": [
+                106,
+                121
+              ],
+              "text": "the development"
+            },
+            {
+              "span": [
+                122,
+                124
+              ],
+              "text": "of"
+            },
+            {
+              "span": [
+                125,
+                131
+              ],
+              "text": "cancer"
+            }
+          ],
+          "valence": {
+            "net": null,
+            "terms": []
+          }
+        },
+        "pred": {
+          "direction": "forward",
+          "named_ents": [],
+          "spans": [
+            [
+              97,
+              102
+            ],
+            [
+              103,
+              105
+            ]
+          ],
+          "text": "leads to",
+          "tokens": [
+            {
+              "span": [
+                97,
+                102
+              ],
+              "text": "leads"
+            },
+            {
+              "span": [
+                103,
+                105
+              ],
+              "text": "to"
+            }
+          ],
+          "valence": {
+            "net": "UP",
+            "terms": [
+              {
+                "end": 102,
+                "start": 97,
+                "term": "leads",
+                "valence": "UP"
+              }
+            ]
+          }
+        },
+        "subj": {
+          "ent_id": "n2",
+          "named_ents": [
+            {
+              "end": 63,
+              "precedence": 1,
+              "refs": [
+                {
+                  "class": "PRGE",
+                  "id": "Q99835",
+                  "source": "UNIPROT",
+                  "sub_id": "T116"
+                },
+                {
+                  "class": "ENZY",
+                  "id": "1.5.3.16",
+                  "source": "EC",
+                  "sub_id": "T126"
+                }
+              ],
+              "start": 47,
+              "term": "spermine oxidase"
+            },
+            {
+              "end": 55,
+              "precedence": 2,
+              "refs": [
+                {
+                  "class": "CHED",
+                  "id": "15746",
+                  "source": "CHEBI",
+                  "sub_id": "T103"
+                }
+              ],
+              "start": 47,
+              "term": "spermine"
+            },
+            {
+              "end": 96,
+              "precedence": 3,
+              "refs": [
+                {
+                  "class": "DISO",
+                  "id": "C0007621",
+                  "source": "UMLS",
+                  "sub_id": "T191"
+                }
+              ],
+              "start": 71,
+              "term": "neoplastic transformation"
+            },
+            {
+              "end": 96,
+              "precedence": 4,
+              "refs": [
+                {
+                  "class": "PROC",
+                  "id": "C0040682",
+                  "source": "UMLS",
+                  "sub_id": "T043"
+                },
+                {
+                  "class": "DISO",
+                  "id": "C1510411",
+                  "source": "UMLS",
+                  "sub_id": "T046"
+                }
+              ],
+              "start": 82,
+              "term": "transformation"
+            }
+          ],
+          "spans": [
+            [
+              30,
+              43
+            ],
+            [
+              44,
+              46
+            ],
+            [
+              47,
+              63
+            ],
+            [
+              64,
+              70
+            ],
+            [
+              71,
+              96
+            ]
+          ],
+          "text": "the induction of spermine oxidase during neoplastic transformation",
+          "tokens": [
+            {
+              "span": [
+                30,
+                43
+              ],
+              "text": "the induction"
+            },
+            {
+              "span": [
+                44,
+                46
+              ],
+              "text": "of"
+            },
+            {
+              "span": [
+                47,
+                63
+              ],
+              "text": "spermine oxidase"
+            },
+            {
+              "span": [
+                64,
+                70
+              ],
+              "text": "during"
+            },
+            {
+              "span": [
+                71,
+                96
+              ],
+              "text": "neoplastic transformation"
+            }
+          ],
+          "valence": {
+            "net": "UP",
+            "terms": [
+              {
+                "end": 43,
+                "start": 34,
+                "term": "induction",
+                "valence": "UP"
+              }
+            ]
+          }
+        },
+        "voice": "active"
+      },
+      {
+        "is_directional": true,
+        "obj": {
+          "ent_id": "n0",
+          "named_ents": [
+            {
+              "end": 131,
+              "precedence": 1,
+              "refs": [
+                {
+                  "class": "DISO",
+                  "id": "C0006826",
+                  "source": "UMLS",
+                  "sub_id": "T191"
+                }
+              ],
+              "start": 125,
+              "term": "cancer"
+            },
+            {
+              "end": 121,
+              "precedence": 2,
+              "refs": [
+                {
+                  "class": "PROC",
+                  "id": "C0678723",
+                  "source": "UMLS",
+                  "sub_id": "T040"
+                },
+                {
+                  "class": "PROC",
+                  "id": "0032502",
+                  "source": "GO",
+                  "sub_id": ""
+                }
+              ],
+              "start": 110,
+              "term": "development"
+            }
+          ],
+          "spans": [
+            [
+              106,
+              121
+            ],
+            [
+              122,
+              124
+            ],
+            [
+              125,
+              131
+            ]
+          ],
+          "text": "the development of cancer",
+          "tokens": [
+            {
+              "span": [
+                106,
+                121
+              ],
+              "text": "the development"
+            },
+            {
+              "span": [
+                122,
+                124
+              ],
+              "text": "of"
+            },
+            {
+              "span": [
+                125,
+                131
+              ],
+              "text": "cancer"
+            }
+          ],
+          "valence": {
+            "net": null,
+            "terms": []
+          }
+        },
+        "pred": {
+          "direction": "forward",
+          "named_ents": [],
+          "spans": [
+            [
+              97,
+              102
+            ],
+            [
+              103,
+              105
+            ]
+          ],
+          "text": "leads to",
+          "tokens": [
+            {
+              "span": [
+                97,
+                102
+              ],
+              "text": "leads"
+            },
+            {
+              "span": [
+                103,
+                105
+              ],
+              "text": "to"
+            }
+          ],
+          "valence": {
+            "net": "UP",
+            "terms": [
+              {
+                "end": 102,
+                "start": 97,
+                "term": "leads",
+                "valence": "UP"
+              }
+            ]
+          }
+        },
+        "subj": {
+          "ent_id": "n1",
+          "named_ents": [],
+          "spans": [
+            [
+              9,
+              24
+            ]
+          ],
+          "text": "direct evidence",
+          "tokens": [
+            {
+              "span": [
+                9,
+                24
+              ],
+              "text": "direct evidence"
+            }
+          ],
+          "valence": {
+            "net": null,
+            "terms": []
+          }
+        },
+        "voice": "active"
+      }
+    ],
+    "functional_relationships": {
+      "entity_level": [
+        {
+          "antecedent": {
+            "text": "spermine oxidase",
+            "valence": "UP"
+          },
+          "consequent": {
+            "text": "cancer",
+            "valence": "UP"
+          },
+          "level": "entity"
+        }
+      ],
+      "phrase_level": [
+        {
+          "antecedent": {
+            "text": "the induction of spermine oxidase during neoplastic transformation",
+            "valence": "UP"
+          },
+          "consequent": {
+            "text": "the development of cancer",
+            "valence": "UP"
+          },
+          "level": "phrase"
+        },
+        {
+          "antecedent": {
+            "text": "direct evidence",
+            "valence": "UP"
+          },
+          "consequent": {
+            "text": "the development of cancer",
+            "valence": "UP"
+          },
+          "level": "phrase"
+        }
+      ]
+    },
+    "markdown_tables": {
+      "entity_level_func_rels": {
+        "markdown": "| Antecedent | Consequent |\n|---|---|\n| &uarr; spermine oxidase | &uarr; cancer |\n",
+        "title": "Functional Relationships (entity level)"
+      },
+      "entity_phrase_relationships": {
+        "markdown": "| Entity phrase left | Relation | Entity phrase right | Voice |\n|---|---|---|---|\n| the induction of spermine oxidase during neoplastic transformation | leads to | the development of cancer | active |\n| direct evidence | leads to | the development of cancer | active |",
+        "title": "Entity Phrase Relationships"
+      },
+      "phrase_level_func_rels": {
+        "markdown": "| Antecedent | Consequent |\n|---|---|\n| &uarr; the induction of spermine oxidase during neoplastic transformation | &uarr; the development of cancer |\n| &uarr; direct evidence | &uarr; the development of cancer |\n",
+        "title": "Functional Relationships (phrase level)"
+      }
+    },
+    "named_ents": [
+      {
+        "end": 63,
+        "precedence": 1,
+        "refs": [
+          {
+            "class": "PRGE",
+            "id": "Q99835",
+            "source": "UNIPROT",
+            "sub_id": "T116"
+          },
+          {
+            "class": "ENZY",
+            "id": "1.5.3.16",
+            "source": "EC",
+            "sub_id": "T126"
+          }
+        ],
+        "start": 47,
+        "term": "spermine oxidase"
+      },
+      {
+        "end": 55,
+        "precedence": 2,
+        "refs": [
+          {
+            "class": "CHED",
+            "id": "15746",
+            "source": "CHEBI",
+            "sub_id": "T103"
+          }
+        ],
+        "start": 47,
+        "term": "spermine"
+      },
+      {
+        "end": 96,
+        "precedence": 3,
+        "refs": [
+          {
+            "class": "DISO",
+            "id": "C0007621",
+            "source": "UMLS",
+            "sub_id": "T191"
+          }
+        ],
+        "start": 71,
+        "term": "neoplastic transformation"
+      },
+      {
+        "end": 96,
+        "precedence": 4,
+        "refs": [
+          {
+            "class": "PROC",
+            "id": "C0040682",
+            "source": "UMLS",
+            "sub_id": "T043"
+          },
+          {
+            "class": "DISO",
+            "id": "C1510411",
+            "source": "UMLS",
+            "sub_id": "T046"
+          }
+        ],
+        "start": 82,
+        "term": "transformation"
+      },
+      {
+        "end": 121,
+        "precedence": 2,
+        "refs": [
+          {
+            "class": "PROC",
+            "id": "C0678723",
+            "source": "UMLS",
+            "sub_id": "T040"
+          },
+          {
+            "class": "PROC",
+            "id": "0032502",
+            "source": "GO",
+            "sub_id": ""
+          }
+        ],
+        "start": 110,
+        "term": "development"
+      },
+      {
+        "end": 131,
+        "precedence": 1,
+        "refs": [
+          {
+            "class": "DISO",
+            "id": "C0006826",
+            "source": "UMLS",
+            "sub_id": "T191"
+          }
+        ],
+        "start": 125,
+        "term": "cancer"
+      }
+    ],
+    "original_text": "There is direct evidence that the induction of spermine oxidase during neoplastic transformation leads to the development of cancer.",
+    "preprocessed_text": "There is direct evidence that the induction of spermine oxidase during neoplastic transformation leads to the development of cancer.",
+    "reference": {
+      "source": "PMC",
+      "id": "PMC6131205"
+    }
+  }
+]

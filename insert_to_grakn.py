@@ -6,7 +6,7 @@ from pprint import pprint
 
 CWD = os.path.abspath(os.path.dirname(__file__))
 DATA_DIR = os.path.join(CWD, 'data')
-PATH = os.path.join(DATA_DIR, 'processed/inf.json')
+PATH = os.path.join(DATA_DIR, 'output.json')
 KEYSPACE = 'bft'
 
 
@@ -48,12 +48,12 @@ with grakn.Graph(keyspace=KEYSPACE) as graph:
             response = graph.execute(query)
         #     pprint(response)
     for result in results:
-        for drive_change_relationships in result['drive_change_relationships']['entity_level']:
+        for func_rels in result['functional_relationships']['entity_level']:
             # First insert the drive_change event for each side of the dynamic association
             drive_change_ids = {}
-            for component in {'antecedent', 'subsequent'}:
-                ent_name = drive_change_relationships[component]['text']
-                valence = drive_change_relationships[component]['valence']
+            for component in {'antecedent', 'consequent'}:
+                ent_name = func_rels[component]['text']
+                valence = func_rels[component]['valence']
                 # Get the ent if it already exists
                 response = graph.match_or_insert('$ent isa named_entity has name \"{}\"'.format(
                     ent_name))
@@ -114,17 +114,17 @@ with grakn.Graph(keyspace=KEYSPACE) as graph:
             query = '''
                 match
                     $antecedent isa drive_change id {ant_id};
-                    $subsequent isa drive_change id {sub_id};
+                    $consequent isa drive_change id {con_id};
                 insert
                     $dynamic_association
                     (
                         antecedent: $antecedent,
-                        subsequent: $subsequent
+                        consequent: $consequent
                     )
                     isa drive_change_relationship;
             '''.format(
                     ant_id=drive_change_ids['antecedent'],
-                    sub_id=drive_change_ids['subsequent'],
+                    con_id=drive_change_ids['consequent'],
                 )
             response = graph.execute(query)
             pprint(response)

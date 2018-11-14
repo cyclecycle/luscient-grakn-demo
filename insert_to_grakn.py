@@ -35,6 +35,8 @@ with grakn.Graph(keyspace=KEYSPACE) as graph:
                         $named_entity id {ent_id};
                     get $drive_change;
                 '''.format(ent_id=ent_id, valence=valence)
+                print(query)
+                print('\n\n')
                 response = graph.execute(query)
                 if not response:
                     query = '''
@@ -51,6 +53,8 @@ with grakn.Graph(keyspace=KEYSPACE) as graph:
                     if item['type'] == 'drive_change':
                         drive_change_ids[component] = item['id']
             # Insert the functional relatinship
+            print(query)
+            print('\n\n')
             query = '''
                 match
                     $antecedent isa drive_change id {ant_id};
@@ -66,6 +70,8 @@ with grakn.Graph(keyspace=KEYSPACE) as graph:
                     ant_id=drive_change_ids['antecedent'],
                     con_id=drive_change_ids['consequent'],
                 )
+            print(query)
+            print('\n\n')
             response = graph.execute(query)
             pprint(response)
 

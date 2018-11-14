@@ -1,0 +1,6 @@
+match 
+    $rel (antecedent: $ant, consequent: $cons) isa functional_relationship;
+    $cons (changed: $cons_ent) isa drive_change;
+    $cons_ent isa named_entity has name "reactive oxygen species";
+get
+    $rel;

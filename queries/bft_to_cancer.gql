@@ -1,0 +1,8 @@
+match 
+    $rel (antecedent: $ant, consequent: $cons) isa functional_relationship;
+    $ant (changed: $ent) isa drive_change;
+    $ent isa named_entity has name "B. fragilis";
+    $cons (changed: $ent2) isa drive_change;
+    $ent2 isa named_entity has name "cancer";
+get
+    $rel;

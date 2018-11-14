@@ -1,0 +1,65 @@
+match $rule sub rule; get $rule; undefine $rule;
+
+define
+
+
+functional_relationship_chain sub rule
+    when {
+        $rel (antecedent: $ant, consequent: $sub) isa functional_relationship;
+        $inferred_rel (antecedent: $sub, consequent: $inferred_sub) isa functional_relationship;
+    }
+    then {
+        (antecedent: $ant, consequent: $inferred_sub) isa functional_relationship;
+    };
+
+
+#converse_drive_change_relationship_UPUP sub rule
+#    when {
+        #$dcr (antecedent: $ant, consequent: $sub) isa drive_change_relationship;
+#        $ant (changed: $ant_ent) isa drive_change has valence "UP";
+#        $sub (changed: $sub_ent) isa drive_change has valence "UP";
+#        $ant_conv (changed: $ant_ent) isa drive_change has valence "DOWN";
+#        $sub_conv (changed: $sub_ent) isa drive_change has valence "DOWN";
+#    }
+#    then {
+        #(antecedent: $ant_conv, consequent: $sub_conv) isa drive_change_relationship has flag "flipped";
+#    };
+#
+#
+#converse_drive_change_relationship_DOWNDOWN sub rule
+#    when {
+        #$dcr (antecedent: $ant, consequent: $sub) isa drive_change_relationship;
+#        $ant (changed: $ant_ent) isa drive_change has valence "DOWN";
+#        $sub (changed: $sub_ent) isa drive_change has valence "DOWN";
+#        $ant_conv (changed: $ant_ent) isa drive_change has valence "UP";
+#        $sub_conv (changed: $sub_ent) isa drive_change has valence "UP";
+#    }
+#    then {
+        #(antecedent: $ant_conv, consequent: $sub_conv) isa drive_change_relationship has flag "flipped";
+#    };
+#
+#
+#converse_drive_change_relationship_UPDOWN sub rule
+#    when {
+        #$dcr (antecedent: $ant, consequent: $sub) isa drive_change_relationship;
+#        $ant (changed: $ant_ent) isa drive_change has valence "UP";
+#        $sub (changed: $sub_ent) isa drive_change has valence "DOWN";
+#        $ant_conv (changed: $ant_ent) isa drive_change has valence "DOWN";
+#        $sub_conv (changed: $sub_ent) isa drive_change has valence "UP";
+#    }
+#    then {
+        #(antecedent: $ant_conv, consequent: $sub_conv) isa drive_change_relationship has flag "flipped";
+#    };
+#
+#
+#converse_drive_change_relationship_DOWNUP sub rule
+#    when {
+        #$dcr (antecedent: $ant, consequent: $sub) isa drive_change_relationship;
+#        $ant (changed: $ant_ent) isa drive_change has valence "DOWN";
+#        $sub (changed: $sub_ent) isa drive_change has valence "UP";
+#        $ant_conv (changed: $ant_ent) isa drive_change has valence "UP";
+#        $sub_conv (changed: $sub_ent) isa drive_change has valence "DOWN";
+#    }
+#    then {
+        #(antecedent: $ant_conv, consequent: $sub_conv) isa drive_change_relationship has flag "flipped";
+#    };

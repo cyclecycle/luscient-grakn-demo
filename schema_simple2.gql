@@ -1,0 +1,52 @@
+match $a; get; undefine $a;
+
+define
+
+# Attributes
+
+text sub attribute, datatype string;
+name sub attribute, datatype string;
+source_name sub attribute, datatype string;
+source_id sub attribute, datatype string;
+valence sub attribute, datatype string;
+
+# Entities
+
+sentence sub entity
+    # The source of our relationships
+    has text
+    has source_name
+    has source_id
+    plays source;
+
+named_entity sub entity
+    has name
+    plays changed;
+
+# Relationships
+
+drive_change sub relationship
+    # A directional change in 'valence' of a concept, or collection of concepts, that reside in a phrase
+    relates changed
+    has valence
+    plays antecedent
+    plays consequent;
+
+functional_relationship sub relationship
+    # Functional link between two drive changes
+    relates antecedent
+    relates consequent
+    plays derived;
+
+derivation sub relationship
+    # Relate a relationship to its originating sentence
+    relates derived
+    relates source;
+
+# Roles
+
+derived sub role;
+source sub role;
+changed sub role;
+antecedent sub role;
+consequent sub role;

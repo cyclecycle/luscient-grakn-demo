@@ -1,0 +1,118 @@
+define
+
+# Attributes
+
+identifier sub attribute, datatype double;
+source sub attribute, datatype string;
+text sub attribute, datatype string;
+name sub attribute, datatype string;
+idx sub attribute, datatype double;
+token_start sub attribute, datatype double;
+token_end sub attribute, datatype double;
+char_start sub attribute, datatype double;
+char_end sub attribute, datatype double;
+instance sub attribute, datatype string;
+spo_id sub attribute, datatype string;
+
+# Entities
+
+document sub entity
+    has identifier
+    has source
+    has text
+    plays parent
+    plays reference;
+
+sentence sub entity
+    has text
+    has idx
+    plays child
+    plays parent
+    plays reference;
+
+token sub entity
+    has text
+    has idx
+    plays child
+    plays reference;
+
+chunk sub entity
+    has text
+    has idx
+    plays parent
+    plays child
+    plays reference;
+
+phrase sub entity
+    has text
+    has token_start
+    has token_end
+    plays parent
+    plays subject
+    plays predicate
+    plays object
+    plays child
+    plays reference;
+
+named_entity sub entity
+    has name
+    plays child
+    plays subject
+    plays object
+    plays referent;
+
+valence sub entity
+    has name
+    plays predicate
+    plays referent;
+
+active_passive sub entity
+    has name
+    plays parent;
+
+term sub entity
+    has text
+    plays parent
+    plays child;
+
+# Roles
+
+parent sub role;
+child sub role;
+subject sub role;
+predicate sub role;
+object sub role;
+referent sub role;
+reference sub role;
+
+# Relationships
+
+composition sub relationship
+    relates parent
+    relates child;
+
+spo sub relationship
+    relates subject
+    relates predicate
+    relates object;
+
+assertion sub relationship
+    relates subject
+    relates predicate
+    relates object
+    has spo_id;
+
+referential sub relationship
+    relates referent
+    relates reference
+    has instance
+    has char_start
+    has char_end;
+
+insert
+
+$UP isa valence has name "UP";
+$DOWN isa valence has name "DOWN";
+
+$active isa active_passive has name "active";
+$passive isa active_passive has name "passive";

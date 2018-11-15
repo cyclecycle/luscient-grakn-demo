@@ -1,14 +1,8 @@
 match 
-    $rel (antecedent: $ant, consequent: $cons) isa functional_relationship;
+    $func_rel (antecedent: $ant, consequent: $cons) isa functional_relationship;
     $ant (changed: $ant_ent) isa drive_change has valence $ant_valence;
     $ent isa named_entity has name $ant_ent_name;
     $ant_ent_name "B. fragilis";
     $ant_valence "UP";
-    $cons (changed: $cons_ent) isa drive_change has valence $cons_valence;
-    $cons_ent isa named_entity has name $cons_ent_name; 
 get
-    $rel;
-    #$ant_ent_name,
-    #$ant_valence,
-    #$cons_ent_name,
-    #$cons_valence;
+    $func_rel;

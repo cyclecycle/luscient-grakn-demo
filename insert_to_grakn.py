@@ -7,7 +7,7 @@ from pprint import pprint
 CWD = os.path.abspath(os.path.dirname(__file__))
 DATA_DIR = os.path.join(CWD, 'data')
 PATH = os.path.join(DATA_DIR, 'output.json')
-KEYSPACE = 'test'
+KEYSPACE = 'bft'
 
 
 with open(PATH) as f:
@@ -16,6 +16,21 @@ with open(PATH) as f:
 
 with grakn.Graph(keyspace=KEYSPACE) as graph:
     for result in results:
+        # Insert the source
+        query = '''
+            insert
+                $sentence isa sentence
+                    has text \"{text}\",
+                    has source_name \"{source_name}\",
+                    has source_id \"{source_id}\";
+        '''.format(
+                text=result['original_text'],
+                source_name=result['reference']['source'],
+                source_id=result['reference']['id'],
+            )
+        response = graph.execute(query)
+        sent_id = [x for x in response if 'sentence' in x][0]['sentence']['id']
+
         for func_rels in result['functional_relationships']['entity_level']:
             # First insert the drive_change event for each side of the functional relationship
             drive_change_ids = {}
@@ -24,7 +39,7 @@ with grakn.Graph(keyspace=KEYSPACE) as graph:
                 valence = func_rels[component]['valence']
                 # Get the named_entity if it already exists
                 response = graph.match_or_insert('$named_entity isa named_entity has name \"{}\"'.format(named_entity))
-                ent_id = response[0]['id']
+                ent_id = response[0]['named_entity']['id']
                 # Match or insert the drive_change event
                 query = '''
                     match
@@ -35,8 +50,6 @@ with grakn.Graph(keyspace=KEYSPACE) as graph:
                         $named_entity id {ent_id};
                     get $drive_change;
                 '''.format(ent_id=ent_id, valence=valence)
-                print(query)
-                print('\n\n')
                 response = graph.execute(query)
                 if not response:
                     query = '''
@@ -50,11 +63,9 @@ with grakn.Graph(keyspace=KEYSPACE) as graph:
                     '''.format(ent_id=ent_id, valence=valence)
                     response = graph.execute(query)
                 for item in response:
-                    if item['type'] == 'drive_change':
-                        drive_change_ids[component] = item['id']
+                    if list(item.keys())[0] == 'drive_change':
+                        drive_change_ids[component] = item['drive_change']['id']
             # Insert the functional relatinship
-            print(query)
-            print('\n\n')
             query = '''
                 match
                     $antecedent isa drive_change id {ant_id};
@@ -70,9 +81,24 @@ with grakn.Graph(keyspace=KEYSPACE) as graph:
                     ant_id=drive_change_ids['antecedent'],
                     con_id=drive_change_ids['consequent'],
                 )
-            print(query)
-            print('\n\n')
             response = graph.execute(query)
-            pprint(response)
+            func_rel_id = [x for x in response if 'func_rel' in x][0]['func_rel']['id']
+            # Insert the derivation relationship
+            query = '''
+                match
+                    $derived isa functional_relationship id {0};
+                    $sentence isa sentence id {1};
+                insert
+                    $derivation
+                        (
+                            derived: $derived,
+                            source: $sentence
+                        )
+                    isa derivation;
+            '''.format(
+                    func_rel_id,
+                    sent_id,
+                )
+            response = graph.execute(query)
 
     graph.commit()

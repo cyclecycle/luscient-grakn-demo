@@ -1,6 +1,6 @@
 match 
     $trig_rel (triggering: $triggering, triggered: $triggered) isa triggering-relationship;
     $triggering has name "B. fragilis";
-    $triggered has name "cancer";
+    $triggered has name "spermine oxidase";
 get
     $trig_rel;

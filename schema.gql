@@ -1,5 +1,3 @@
-match $a; get; undefine $a;
-
 define
 
 # Attributes
@@ -12,41 +10,36 @@ valence sub attribute, datatype string;
 
 # Entities
 
-sentence sub entity
+source sub entity
     # The source of our relationships
     has text
     has source_name
     has source_id
-    plays source;
+    plays reference;
 
-named_entity sub entity
+driven-concept sub entity
+    # A biological concept whose 'drive' has increased or decreased
     has name
-    plays changed;
+    has valence
+    plays triggering
+    plays triggered;
 
 # Relationships
 
-drive_change sub relationship
-    # A directional change in 'valence' of a concept, or collection of concepts, that reside in a phrase
-    relates changed
-    has valence
-    plays antecedent
-    plays consequent;
-
-functional_relationship sub relationship
-    # Functional link between two drive changes
-    relates antecedent
-    relates consequent
+triggering-relationship sub relationship
+    # Relate two causally-linked changes in drive
+    relates triggering
+    relates triggered
     plays derived;
 
 derivation sub relationship
-    # Relate a relationship to its originating sentence
+    # Link an assertion to its originating text
     relates derived
-    relates source;
+    relates reference;
 
 # Roles
 
+reference sub role;
 derived sub role;
-source sub role;
-changed sub role;
-antecedent sub role;
-consequent sub role;
+triggering sub role;
+triggered sub role;

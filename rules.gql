@@ -1,12 +1,12 @@
-match $rule sub rule; get $rule; undefine $rule;
+#match $rule sub rule; get $rule; undefine $rule;
 
 define
 
-functional_relationship_chain sub rule
+triggering-cascade sub rule
     when {
-        $rel (antecedent: $ant, consequent: $sub) isa functional_relationship;
-        $inferred_rel (antecedent: $sub, consequent: $inferred_sub) isa functional_relationship;
+        $rel (triggering: $triggering, triggered: $triggered) isa triggering-relationship;
+        $rel2 (triggering: $triggered, triggered: $triggered2) isa triggering-relationship;
     }
     then {
-        (antecedent: $ant, consequent: $inferred_sub) isa functional_relationship;
+        (triggering: $triggering, triggered: $triggered2) isa triggering-relationship;
     };

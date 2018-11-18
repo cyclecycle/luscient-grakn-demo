@@ -1,8 +1,5 @@
 match 
-    $func_rel (antecedent: $ant, consequent: $cons) isa functional_relationship;
-    $ant (changed: $ant_ent) isa drive_change has valence $ant_valence;
-    $ent isa named_entity has name $ant_ent_name;
-    $ant_ent_name "B. fragilis";
-    $ant_valence "UP";
+    $trig_rel (triggering: $triggering, triggered: $triggered) isa triggering-relationship;
+    $triggering has name "B. fragilis" has valence "UP";
 get
-    $func_rel;
+    $trig_rel;

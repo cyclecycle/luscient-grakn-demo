@@ -1,0 +1,8 @@
+match 
+    $trig_rel (triggering: $triggering, triggered: $triggered) isa triggering-relationship;
+    $triggering has name "B. fragilis";
+    $triggered has name "cancer";
+    $derivation (derived: $trig_rel, reference: $source) isa derivation;
+get
+    $trig_rel,
+    $source;

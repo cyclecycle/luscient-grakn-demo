@@ -1,13 +1,13 @@
 import os
 import json
-import pygrakn.pygrakn as grakn
+import primal_grakn.primal_grakn as grakn
 from pprint import pprint
 
 
 CWD = os.path.abspath(os.path.dirname(__file__))
 DATA_DIR = os.path.join(CWD, 'data')
 PATH = os.path.join(DATA_DIR, 'output.json')
-KEYSPACE = 'bft4'
+KEYSPACE = 'bft5'
 
 
 with open(PATH) as f:

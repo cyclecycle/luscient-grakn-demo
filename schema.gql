@@ -2,20 +2,13 @@ define
 
 # Attributes
 
-text sub attribute, datatype string;
 name sub attribute, datatype string;
-source_name sub attribute, datatype string;
-source_id sub attribute, datatype string;
 valence sub attribute, datatype string;
+source-text sub attribute, datatype string;
+source-name sub attribute, datatype string;
+source-id sub attribute, datatype string;
 
 # Entities
-
-source sub entity
-    # The source of our relationships
-    has text
-    has source_name
-    has source_id
-    plays reference;
 
 driven-concept sub entity
     # A biological concept whose 'drive' has increased or decreased
@@ -30,16 +23,11 @@ triggering-relationship sub relationship
     # Relate two causally-linked changes in drive
     relates triggering
     relates triggered
-    plays derived;
-
-derivation sub relationship
-    # Link an assertion to its originating text
-    relates derived
-    relates reference;
+    has source-text
+    has source-name
+    has source-id;
 
 # Roles
 
-reference sub role;
-derived sub role;
 triggering sub role;
 triggered sub role;

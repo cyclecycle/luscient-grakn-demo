@@ -1,11 +1,9 @@
-#match $rule sub rule; get $rule; undefine $rule;
-
 define
 
 triggering-cascade sub rule
     when {
-        $rel (triggering: $triggering, triggered: $triggered) isa triggering-relationship;
-        $rel2 (triggering: $triggered, triggered: $triggered2) isa triggering-relationship;
+        (triggering: $triggering, triggered: $triggered) isa triggering-relationship;
+        (triggering: $triggered, triggered: $triggered2) isa triggering-relationship;
     }
     then {
         (triggering: $triggering, triggered: $triggered2) isa triggering-relationship;

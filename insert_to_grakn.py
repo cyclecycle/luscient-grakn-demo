@@ -1,13 +1,13 @@
 import os
 import json
-import pygrakn.pygrakn as grakn
+import primal_grakn.primal_grakn as grakn
 from pprint import pprint
 
 
 CWD = os.path.abspath(os.path.dirname(__file__))
 DATA_DIR = os.path.join(CWD, 'data')
 PATH = os.path.join(DATA_DIR, 'output.json')
-KEYSPACE = 'bft'
+KEYSPACE = 'luscient-grakn-demo'
 
 
 with open(PATH) as f:
@@ -17,88 +17,69 @@ with open(PATH) as f:
 with grakn.Graph(keyspace=KEYSPACE) as graph:
     for result in results:
         # Insert the source
-        query = '''
-            insert
-                $sentence isa sentence
-                    has text \"{text}\",
-                    has source_name \"{source_name}\",
-                    has source_id \"{source_id}\";
-        '''.format(
-                text=result['original_text'],
-                source_name=result['reference']['source'],
-                source_id=result['reference']['id'],
-            )
-        response = graph.execute(query)
-        sent_id = [x for x in response if 'sentence' in x][0]['sentence']['id']
+        # query = '''
+        #     insert
+        #         $source isa source
+        #             has text \"{text}\",
+        #             has source_name \"{source_name}\",
+        #             has source_id \"{source_id}\";
+        # '''.format(
+        #         text=result['original_text'],
+        #         source_name=result['reference']['source'],
+        #         source_id=result['reference']['id'],
+        #     )
+        # response = graph.execute(query)
+        # source_id = [x for x in response if 'source' in x][0]['source']['id']
 
-        for func_rels in result['functional_relationships']['entity_level']:
-            # First insert the drive_change event for each side of the functional relationship
-            drive_change_ids = {}
+        for func_rel in result['functional_relationships']['entity_level']:
+            concept_ids = {}
             for component in {'antecedent', 'consequent'}:
-                named_entity = func_rels[component]['text']
-                valence = func_rels[component]['valence']
+                named_entity = func_rel[component]['text']
+                valence = func_rel[component]['valence']
                 # Get the named_entity if it already exists
-                response = graph.match_or_insert('$named_entity isa named_entity has name \"{}\"'.format(named_entity))
-                ent_id = response[0]['named_entity']['id']
-                # Match or insert the drive_change event
-                query = '''
-                    match
-                        $drive_change
-                            (changed: $named_entity)
-                            isa drive_change
-                            has valence \"{valence}\";
-                        $named_entity id {ent_id};
-                    get $drive_change;
-                '''.format(ent_id=ent_id, valence=valence)
-                response = graph.execute(query)
-                if not response:
-                    query = '''
-                        match
-                            $named_entity isa named_entity id {ent_id};
-                        insert
-                            $drive_change
-                                (changed: $named_entity)
-                                isa drive_change
-                                has valence \"{valence}\";
-                    '''.format(ent_id=ent_id, valence=valence)
-                    response = graph.execute(query)
-                for item in response:
-                    if list(item.keys())[0] == 'drive_change':
-                        drive_change_ids[component] = item['drive_change']['id']
-            # Insert the functional relatinship
+                response = graph.match_or_insert('$driven_concept isa driven-concept has name \"{0}\" has valence \"{1}\";'.format(named_entity, valence))
+                ent_id = response[0]['driven_concept']['id']
+                concept_ids[component] = ent_id
+            # Insert the functional relationship
             query = '''
                 match
-                    $antecedent isa drive_change id {ant_id};
-                    $consequent isa drive_change id {con_id};
+                    $triggering isa driven-concept id {ant_id};
+                    $triggered isa driven-concept id {con_id};
                 insert
-                    $func_rel
+                    $trig_rel
                     (
-                        antecedent: $antecedent,
-                        consequent: $consequent
+                        triggering: $triggering,
+                        triggered: $triggered
                     )
-                    isa functional_relationship;
+                    has source-text \"{source_text}\"
+                    has source-name \"{source_name}\"
+                    has source-id \"{source_id}\"
+                    isa triggering-relationship;
             '''.format(
-                    ant_id=drive_change_ids['antecedent'],
-                    con_id=drive_change_ids['consequent'],
+                    ant_id=concept_ids['antecedent'],
+                    con_id=concept_ids['consequent'],
+                    source_text=result['original_text'],
+                    source_name=result['reference']['source'],
+                    source_id=result['reference']['id'],
                 )
             response = graph.execute(query)
-            func_rel_id = [x for x in response if 'func_rel' in x][0]['func_rel']['id']
-            # Insert the derivation relationship
-            query = '''
-                match
-                    $derived isa functional_relationship id {0};
-                    $sentence isa sentence id {1};
-                insert
-                    $derivation
-                        (
-                            derived: $derived,
-                            source: $sentence
-                        )
-                    isa derivation;
-            '''.format(
-                    func_rel_id,
-                    sent_id,
-                )
-            response = graph.execute(query)
+            # trig_rel_id = [x for x in response if 'trig_rel' in x][0]['trig_rel']['id']
+            # # Insert the derivation relationship
+            # query = '''
+            #     match
+            #         $derived isa triggering-relationship id {0};
+            #         $source isa source id {1};
+            #     insert
+            #         $derivation
+            #             (
+            #                 derived: $derived,
+            #                 reference: $source
+            #             )
+            #         isa derivation;
+            # '''.format(
+            #         trig_rel_id,
+            #         source_id,
+            #     )
+            # response = graph.execute(query)
 
     graph.commit()

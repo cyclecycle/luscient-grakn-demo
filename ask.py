@@ -6,7 +6,7 @@ import markdown
 
 CWD = os.path.abspath(os.path.dirname(__file__))
 QUERY_DIR = os.path.join(CWD, 'queries')
-KEYSPACE = 'bft5'
+KEYSPACE = 'luscient-grakn-demo'
 
 
 def valence_to_arrow(valence):
@@ -30,7 +30,7 @@ def func_rels_to_table(results):
 
 def sort_explanation(flat_explanation):
     # the fact we want to explain appears with the key from the query
-    to_explain = [x for x in flat_explanation if 'trig_rel' in x][0]['trig_rel']
+    to_explain = [x for x in flat_explanation if 'triggering_relationship' in x][0]['triggering_relationship']
     if not to_explain.object.is_inferred():
         return [to_explain]  # Fact is the explanation of itself
     # Get the start point and end point ids
@@ -57,14 +57,18 @@ def sort_explanation(flat_explanation):
     return results
 
 
-def create_consequences_table(results):
+def pmc_link(pmcid):
+    return '<a href=\"https://www.ncbi.nlm.nih.gov/pmc/articles/{0}/\">{0}</a>'.format(pmcid)
+
+
+def create_outcome_table(results):
     html = '''<tr>
-<td rowspan="2"><b>Consequence</b></td>
+<td rowspan="2" align="center" class="top"><b>Outcome</b></td>
 <td colspan="2" align="center"><b>Premise</b></td>
 </tr>
 <tr>
-<td align="center"><b>Relationship</b></td>
-<td align="center"><b>Source</b></td>
+<td align="center" class="top"><b>Relationship(s)</b></td>
+<td align="center" class="top"><b>Source</b></td>
 </tr>
 '''
     # for item in results:
@@ -72,45 +76,48 @@ def create_consequences_table(results):
         row = '<tr>'
         name = item['triggered']['name']['value']
         arrow = valence_to_arrow(item['triggered']['valence']['value'])
-        row += '\n<td rowspan=\"{0}\">{1} {2}</td>'.format(len(item['explanation']), arrow, name)
+        row += '\n<td rowspan=\"{0}\" class="outcome">{1} {2}</td>'.format(len(item['explanation']), arrow, name)
         row += '\n{0}\n</tr>'
         for i, fact in enumerate(item['explanation']):
-            td = '<td>{0} {1} &rarr; {2} {3}</td>\n<td>{4}</td>'
+            if i == len(item['explanation']) - 1:
+                td = '<td class="last">{0} {1} &rarr; {2} {3}</td>\n<td class="last">\"{4}\" ({5})</td>'
+            else:
+                td = '<td>{0} {1} &rarr; {2} {3}</td>\n<td>\"{4}\" ({5})</td>'
+
             td = td.format(
                 valence_to_arrow(fact['triggering']['valence']['value']),
                 fact['triggering']['name']['value'],
                 valence_to_arrow(fact['triggered']['valence']['value']),
                 fact['triggered']['name']['value'],
-                'SOURCE'
+                fact['source-text']['value'],
+                pmc_link(fact['source-id']['value'])
             )
             if i == 0:
                 row = row.format(td)
-                html += row
+            elif i == len(item['explanation']) - 1:
+                row = '\n<tr class="last">\n{}\n</tr>'.format(td)
             else:
                 row = '\n<tr>\n{}\n</tr>'.format(td)
-                html += row
-    html = '<table>\n' + html + '\n</table>'
-    print(html)
+            html += row
+    html = '<table>\n' + html + '\n</table>\n'
+    html += r'<link rel="stylesheet" type="text/css" href="table_style.css">'
+    with open(os.path.join(CWD, 'table_style.css')) as f:
+        css = f.read()
+        html += '\n<style>\n{0}\n</style>'.format(css)
     return html
 
 
 with grakn.Graph(keyspace=KEYSPACE) as graph:
     # query_file = os.path.join(QUERY_DIR, 'consequences_of_bft_increase.gql')
     # query_file = os.path.join(QUERY_DIR, 'paths_to_ros.gql')
-    # query_file = os.path.join(QUERY_DIR, 'bft_to_cancer.gql')
-    query_file = os.path.join(QUERY_DIR, 'bft_to_cancer_with_source.gql')
+    query_file = os.path.join(QUERY_DIR, 'bft_to_cancer.gql')
     concept_maps = graph.execute(query_file, from_file=True)
-    pprint(concept_maps)
-    raise
     # pprint(concept_maps)
     results = []
     for concept_map in concept_maps:
-        # pprint(concept_map)
-        # raise
-        # pprint(concept_map.flat_explanation)
         sorted_facts = sort_explanation(concept_map.flat_explanation)
-        pprint(sorted_facts)
-        concept_map['trig_rel']['explanation'] = sorted_facts
-        results.append(concept_map['trig_rel'])
-    # pprint(results)
-    html = create_consequences_table(results)
+        concept_map['triggering_relationship']['explanation'] = sorted_facts
+        results.append(concept_map['triggering_relationship'])
+    html = create_outcome_table(results)
+    with open('outcome_table.html', 'w', encoding='utf-8') as f:
+        f.write(html)

@@ -1,6 +1,5 @@
 match 
-    $func_rel (antecedent: $ant, consequent: $cons) isa functional_relationship;
-    $cons (changed: $cons_ent) isa drive_change;
-    $cons_ent isa named_entity has name "reactive oxygen species";
+    $triggering_relationship (triggering: $triggering, triggered: $triggered) isa triggering-relationship;
+    $triggered has name "reactive oxygen species" has valence "UP";
 get
-    $func_rel;
+    $triggering_relationship;

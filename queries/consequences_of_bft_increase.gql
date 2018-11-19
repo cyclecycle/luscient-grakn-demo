@@ -1,5 +1,5 @@
 match 
-    $trig_rel (triggering: $triggering, triggered: $triggered) isa triggering-relationship;
+    $triggering_relationship (triggering: $triggering, triggered: $triggered) isa triggering-relationship;
     $triggering has name "B. fragilis" has valence "UP";
 get
-    $trig_rel;
+    $triggering_relationship;

@@ -2,8 +2,8 @@ define
 
 triggering-cascade sub rule
     when {
-        (triggering: $triggering, triggered: $triggered) isa triggering-relationship;
-        (triggering: $triggered, triggered: $triggered2) isa triggering-relationship;
+        $rel (triggering: $triggering, triggered: $triggered) isa triggering-relationship;
+        $rel2 (triggering: $triggered, triggered: $triggered2) isa triggering-relationship;
     }
     then {
         (triggering: $triggering, triggered: $triggered2) isa triggering-relationship;

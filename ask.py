@@ -1,12 +1,12 @@
 import os
-import primal_grakn.primal_grakn as grakn
+import primal_grakn as grakn
 from pprint import pprint
 import markdown
 
 
 CWD = os.path.abspath(os.path.dirname(__file__))
 QUERY_DIR = os.path.join(CWD, 'queries')
-KEYSPACE = 'luscient-grakn-demo'
+KEYSPACE = 'luscient_grakn_demo'
 
 
 def valence_to_arrow(valence):
@@ -108,9 +108,11 @@ def create_outcome_table(results):
 
 
 with grakn.Graph(keyspace=KEYSPACE) as graph:
+    # SET QUERY FILE HERE
     # query_file = os.path.join(QUERY_DIR, 'consequences_of_bft_increase.gql')
     # query_file = os.path.join(QUERY_DIR, 'paths_to_ros.gql')
     query_file = os.path.join(QUERY_DIR, 'bft_to_cancer.gql')
+
     concept_maps = graph.execute(query_file, from_file=True)
     # pprint(concept_maps)
     results = []

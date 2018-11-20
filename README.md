@@ -1,6 +1,6 @@
 # luscient-grakn-demo
 
-This repo accompanies the article released [here]().
+This repo accompanies the article titled "Biomedical Fact Extraction and Reasoning - Knowledge Graphs from Scientific Text".
 
 ## Set up
 
@@ -19,13 +19,15 @@ pip install -r requirements.txt
 Instantiate the schema and rules. This can be done in the bash shell like:
 
 ```bash
-graql console -k luscient-grakn-demo -f schema.gql
-graql console -k luscient-grakn-demo -f rules.gql
+graql console -k luscient_grakn_demo -f schema.gql
+graql console -k luscient_grakn_demo -f rules.gql
 ```
 
 ## Extracting information from text
 
 The 'luscient_api.py' script looks in data/input.json for a list of records, each with data for 'text' and PubMed Central ID ('pmcid').
+
+You can replace these records with your own.
 
 For each record it will attempt to retrieve results from the [API](http://www.luscient.io/artifact).
 
@@ -37,6 +39,8 @@ The 'insert_to_grakn.py' script takes the results in data/output.json and insert
 
 ## Querying
 
-The 'ask.py' file is set up to run any query that returns of triggering-relationships with variable name ($triggering_relationship) and create an outcome table (outcome_table.html).
+The 'ask.py' file is set up to run any query that returns of triggering-relationships with variable name '$triggering_relationship' (like any of the queries in /queries folder) and create an outcome table (outcome_table.html).
+
+You can change the code to point a different a different .gql query file.
 
 Beyond that, you can explore and query the graph through any of the normal methods of interacting with Grakn.

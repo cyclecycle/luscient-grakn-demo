@@ -2,6 +2,7 @@ certifi==2018.10.15
 chardet==3.0.4
 grakn==1.4.2
 grpcio==1.16.0
+primal-grakn==0.0.1
 idna==2.7
 protobuf==3.6.1
 requests==2.20.0

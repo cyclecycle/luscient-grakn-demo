@@ -1,7 +1,7 @@
 import os
 import primal_grakn as grakn
 from pprint import pprint
-import markdown
+# import markdown
 
 
 CWD = os.path.abspath(os.path.dirname(__file__))
@@ -15,17 +15,17 @@ def valence_to_arrow(valence):
     return '&darr;'
 
 
-def func_rels_to_table(results):
-    md = '| Antecedent | Consequent |\n|---|---|'
-    for item in results:
-        md += '\n| {0} {1}| {2} {3} |'.format(
-            valence_to_arrow(item['antecedent']['valence']),
-            item['antecedent']['text'],
-            valence_to_arrow(item['consequent']['valence']),
-            item['consequent']['text'],
-        )
-    html = markdown.markdown(md, extensions=['markdown.extensions.tables'])
-    return html
+# def func_rels_to_table(results):
+#     md = '| Antecedent | Consequent |\n|---|---|'
+#     for item in results:
+#         md += '\n| {0} {1}| {2} {3} |'.format(
+#             valence_to_arrow(item['antecedent']['valence']),
+#             item['antecedent']['text'],
+#             valence_to_arrow(item['consequent']['valence']),
+#             item['consequent']['text'],
+#         )
+#     html = markdown.markdown(md, extensions=['markdown.extensions.tables'])
+#     return html
 
 
 def sort_explanation(flat_explanation):

@@ -44,3 +44,11 @@ The 'ask.py' file is set up to run any query that returns triggering-relationshi
 You can change the code to point to a different .gql query file.
 
 Beyond that, you can explore and query the graph through any of the normal methods of interacting with Grakn.
+
+## Issues
+
+Future changes to the API may break things.
+
+Feel free to contact me:
+
+luscient.tech@gmail.com

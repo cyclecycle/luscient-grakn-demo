@@ -4,7 +4,7 @@
       {
         "is_directional": true,
         "obj": {
-          "ent_id": "n0",
+          "ent_id": "n1",
           "named_ents": [
             {
               "end": 80,
@@ -158,7 +158,7 @@
           }
         },
         "subj": {
-          "ent_id": "n1",
+          "ent_id": "n0",
           "named_ents": [
             {
               "end": 44,
@@ -381,7 +381,7 @@
       {
         "is_directional": true,
         "obj": {
-          "ent_id": "n1",
+          "ent_id": "n2",
           "named_ents": [
             {
               "end": 114,
@@ -491,7 +491,7 @@
           }
         },
         "subj": {
-          "ent_id": "n2",
+          "ent_id": "n0",
           "named_ents": [
             {
               "end": 26,
@@ -576,7 +576,7 @@
       {
         "is_directional": true,
         "obj": {
-          "ent_id": "n0",
+          "ent_id": "n3",
           "named_ents": [
             {
               "end": 129,
@@ -657,7 +657,7 @@
           }
         },
         "subj": {
-          "ent_id": "n2",
+          "ent_id": "n0",
           "named_ents": [
             {
               "end": 26,
@@ -742,7 +742,7 @@
       {
         "is_directional": true,
         "obj": {
-          "ent_id": "n1",
+          "ent_id": "n2",
           "named_ents": [
             {
               "end": 114,
@@ -852,7 +852,7 @@
           }
         },
         "subj": {
-          "ent_id": "n3",
+          "ent_id": "n1",
           "named_ents": [
             {
               "end": 61,
@@ -915,7 +915,7 @@
       {
         "is_directional": true,
         "obj": {
-          "ent_id": "n0",
+          "ent_id": "n3",
           "named_ents": [
             {
               "end": 129,
@@ -996,7 +996,7 @@
           }
         },
         "subj": {
-          "ent_id": "n3",
+          "ent_id": "n1",
           "named_ents": [
             {
               "end": 61,
@@ -1346,7 +1346,7 @@
       {
         "is_directional": true,
         "obj": {
-          "ent_id": "n0",
+          "ent_id": "n2",
           "named_ents": [
             {
               "end": 131,
@@ -1469,7 +1469,7 @@
           }
         },
         "subj": {
-          "ent_id": "n2",
+          "ent_id": "n0",
           "named_ents": [
             {
               "end": 63,
@@ -1617,7 +1617,7 @@
       {
         "is_directional": true,
         "obj": {
-          "ent_id": "n0",
+          "ent_id": "n2",
           "named_ents": [
             {
               "end": 131,

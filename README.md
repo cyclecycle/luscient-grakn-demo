@@ -8,7 +8,7 @@ This repo accompanies the article titled "Biomedical Fact Extraction and Reasoni
 
 These steps assume you have [Grakn]() running (e.g, with `grakn server start`).
 
-Python requirements are listed in requirements.txt. Install them like:
+Python requirements are listed in requirements.txt. Install them with:
 
 ```bash
 pip install -r requirements.txt
@@ -35,12 +35,12 @@ The results are stored in data/output.json.
 
 ## Inserting into Grakn
 
-The 'insert_to_grakn.py' script takes the results in data/output.json and inserts them into the grakn keyspace named 'luscient-grakn-demo'.
+The 'insert_to_grakn.py' script takes the results in data/output.json and inserts them into the grakn keyspace named 'luscient_grakn_demo'.
 
 ## Querying
 
-The 'ask.py' file is set up to run any query that returns of triggering-relationships with variable name '$triggering_relationship' (like any of the queries in /queries folder) and create an outcome table (outcome_table.html).
+The 'ask.py' file is set up to run any query that returns triggering-relationships with variable name '$triggering_relationship' (like any of the queries in /queries folder) and create an outcome table like that shown in the article (outcome_table.html).
 
-You can change the code to point a different a different .gql query file.
+You can change the code to point to a different .gql query file.
 
 Beyond that, you can explore and query the graph through any of the normal methods of interacting with Grakn.

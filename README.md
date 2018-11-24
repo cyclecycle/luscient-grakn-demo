@@ -39,7 +39,7 @@ The 'insert_to_grakn.py' script takes the results in data/output.json and insert
 
 ## Querying
 
-The 'ask.py' file is set up to run any query that returns triggering-relationships with variable name '$triggering_relationship' (like any of the queries in /queries folder) and create an outcome table (outcome_table.html) like that shown in the article.
+The 'ask.py' file is set up to run any query that returns triggering-relationships under the variable name '$triggering_relationship' (like any of the queries in /queries folder) and create an outcome table (outcome_table.html) like that shown in the article.
 
 You can change the code to point to a different .gql query file.
 

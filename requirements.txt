@@ -4,7 +4,7 @@ grakn==1.4.2
 grpcio==1.16.0
 primal-grakn==0.0.1
 idna==2.7
-protobuf==3.6.1
+protobuf==3.15.0
 requests==2.20.0
 six==1.11.0
 urllib3==1.24
